@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Fruit.Models.Information>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -6,3 +6,12 @@
 
 <h2>Index</h2>
 
+@using (Html.BeginForm("Update", "Main"))
+{
+    <div class="form-group">
+        <label>Textarea</label>
+        <textarea class="form-control" rows="4" placeholder="შეიყვანეთ ტექსტი ...">@Model.ElementAtOrDefault(0).Title</textarea>
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+
+}

@@ -1,14 +1,16 @@
-﻿using Fruit.Models;
+﻿using AutoMapper;
+using Fruit.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Fruit.ViewModels;
 
 namespace Fruit.Areas.Admin.Controllers
 {
-   
+
 
     public class MainController : Controller
     {
@@ -27,17 +29,28 @@ namespace Fruit.Areas.Admin.Controllers
         // GET: Admin/Main
         public ActionResult Index()
         {
-            var information = _context.Information.ToList();
-            
-            return View(information);
+
+            var informationInDb = _context.Information.ToList();
+
+            var informationListViewModel = new List<InformationViewModel>();
+
+            Mapper.Map(informationInDb, informationListViewModel);
+
+            return View(informationListViewModel);
         }
 
         [HttpPost]
-        public ActionResult Update(Information information)
+        public ActionResult Update(InformationViewModel model)
         {
-            var informationInDb = _context.Information.FirstOrDefault(c => c.Id == information.Id);
+            var informationInDb = _context.Information.SingleOrDefault(c => c.Id == model.Id);
 
-            return View();
+            Mapper.Map(model, informationInDb);
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Main");
         }
+
+        
     }
 }

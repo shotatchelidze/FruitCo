@@ -1,17 +1,51 @@
-﻿@model IEnumerable<Fruit.Models.Information>
+﻿@model List<Fruit.ViewModels.InformationViewModel>
 @{
+    /**/
+
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
 
-@using (Html.BeginForm("Update", "Main"))
+
+@using (Html.BeginForm("Update", "Main", FormMethod.Post))
 {
+
+    @Html.HiddenFor(c => c.ElementAtOrDefault(0).Id)
+
     <div class="form-group">
-        <label>Textarea</label>
-        <textarea class="form-control" rows="4" placeholder="შეიყვანეთ ტექსტი ...">@Model.ElementAtOrDefault(0).Title</textarea>
+        @Html.LabelFor(c => c.ElementAtOrDefault(0).Title)
+        @Html.TextAreaFor(c => c.ElementAtOrDefault(0).Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
         <button type="submit" class="btn btn-primary">შენახვა</button>
     </div>
 
+    <div class="form-group">
+        @Html.LabelFor(c => c.ElementAtOrDefault(0).Subtitle)
+        @Html.TextAreaFor(c => c.ElementAtOrDefault(0).Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ElementAtOrDefault(0).Text)
+        @Html.TextAreaFor(c => c.ElementAtOrDefault(0).Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+
+    
+    <div class="form-group">
+        @Html.LabelFor(c => c.ElementAtOrDefault(1).Title)
+        @Html.TextAreaFor(c => c.ElementAtOrDefault(1).Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.ElementAtOrDefault(1).Subtitle)
+        @Html.TextAreaFor(c => c.ElementAtOrDefault(1).Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ElementAtOrDefault(1).Text)
+        @Html.TextAreaFor(c => c.ElementAtOrDefault(1).Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
 }

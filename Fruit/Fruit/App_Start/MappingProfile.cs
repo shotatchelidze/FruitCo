@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AutoMapper;
-using Fruit.Dto;
 using Fruit.Models;
+using Fruit.ViewModels;
 
 namespace Fruit.App_Start
 {
@@ -12,10 +12,10 @@ namespace Fruit.App_Start
     {
         public MappingProfile()
         {
-            Mapper.CreateMap<Information, InformationDto>();
+            Mapper.CreateMap<Information, InformationViewModel>();
 
 
-            Mapper.CreateMap<InformationDto, Information>();
+            Mapper.CreateMap<InformationViewModel, Information>();
 
         }
     }

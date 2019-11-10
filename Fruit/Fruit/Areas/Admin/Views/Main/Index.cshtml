@@ -31,6 +31,12 @@
         <button type="submit" class="btn btn-primary">შენახვა</button>
     </div>
 
+}
+
+@using (Html.BeginForm("Update", "Main", FormMethod.Post))
+{
+
+    @Html.HiddenFor(c => c.ElementAtOrDefault(1).Id)
     
     <div class="form-group">
         @Html.LabelFor(c => c.ElementAtOrDefault(1).Title)
@@ -48,4 +54,5 @@
         @Html.TextAreaFor(c => c.ElementAtOrDefault(1).Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
         <button type="submit" class="btn btn-primary">შენახვა</button>
     </div>
+
 }

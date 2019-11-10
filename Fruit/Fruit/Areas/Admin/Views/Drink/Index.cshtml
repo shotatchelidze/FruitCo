@@ -1,0 +1,56 @@
+﻿@model Fruit.ViewModels.CommonViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("UpdateInformation", "Drink", FormMethod.Post))
+{
+
+    @Html.HiddenFor(c => c.InformationViewModel.ElementAtOrDefault(2).Id)
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(2).Title)
+        @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(2).Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(2).Subtitle)
+        @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(2).Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(2).Text)
+        @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(2).Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+
+}
+
+
+@using (Html.BeginForm("UpdateInformation", "Drink", FormMethod.Post))
+{
+
+    @Html.HiddenFor(c => c.InformationViewModel.ElementAtOrDefault(3).Id)
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(3).Title)
+        @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(3).Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(3).Subtitle)
+        @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(3).Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(3).Text)
+        @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(3).Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <button type="submit" class="btn btn-primary">შენახვა</button>
+    </div>
+
+}

@@ -47,11 +47,11 @@ namespace Fruit.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult UpdateInformation(InformationViewModel model)
+        public ActionResult UpdateInformation(CommonViewModel model)
         {
-            var informationInDb = _context.Information.SingleOrDefault(c => c.Id == model.Id);
+            var information = _context.Information.ToList();
 
-            Mapper.Map(model, informationInDb);
+            Mapper.Map(model, information);
 
             _context.SaveChanges();
 

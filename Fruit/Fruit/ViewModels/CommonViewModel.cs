@@ -7,7 +7,13 @@ namespace Fruit.ViewModels
 {
     public class CommonViewModel
     {
-        public List<InformationViewModel> InformationViewModel { get; set; }
-        public List<ContainerViewModel> ContainerViewModel { get; set; }
+        public CommonViewModel()
+        {
+            InformationViewModelList = new List<InformationViewModelList>();
+            ContainerViewModelList = new List<ContainerViewModel>();
+        }
+
+        public List<InformationViewModelList> InformationViewModelList { get; set; }
+        public List<ContainerViewModel> ContainerViewModelList { get; set; }
     }
 }

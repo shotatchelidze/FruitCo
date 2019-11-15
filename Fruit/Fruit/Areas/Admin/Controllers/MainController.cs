@@ -32,7 +32,7 @@ namespace Fruit.Areas.Admin.Controllers
 
             var informationInDb = _context.Information.ToList();
 
-            var informationListViewModel = new List<InformationViewModel>();
+            var informationListViewModel = new List<InformationViewModelList>();
 
             Mapper.Map(informationInDb, informationListViewModel);
 
@@ -40,7 +40,7 @@ namespace Fruit.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(InformationViewModel model)
+        public ActionResult Update(InformationViewModelList model)
         {
             var informationInDb = _context.Information.SingleOrDefault(c => c.Id == model.Id);
 

@@ -6,7 +6,7 @@ using Fruit.Models;
 
 namespace Fruit.ViewModels
 {
-    public class InformationViewModel
+    public class InformationViewModelList
     {
         public int Id { get; set; }
         

@@ -37,12 +37,14 @@ namespace Fruit.Areas.Admin.Controllers
             Mapper.Map(informationInDb, informationListViewModel);
             Mapper.Map(containerInDb, containerListViewModel);
 
-            var commonViewModel = new CommonViewModel
-            {
-                InformationViewModel = informationListViewModel,
-                ContainerViewModel = containerListViewModel
-            };
+            //var commonViewModel = new CommonViewModel
+            //{
+            //    InformationViewModel = informationListViewModel,
+            //    ContainerViewModel = containerListViewModel
+            //};
+
             
+
             return View(commonViewModel);
         }
 

@@ -28,10 +28,10 @@ namespace Fruit.Areas.Admin.Controllers
         // GET: Admin/Drink
         public ActionResult Index()
         {
-            var informationInDb = _context.Information.ToList();
+            var informationInDb = _context.Information.Take(2).ToList();
             var containerInDb = _context.Container.ToList();
 
-            var informationListViewModel = new List<InformationViewModel>();
+            var informationListViewModel = new List<InformationViewModelList>();
             var containerListViewModel = new List<ContainerViewModel>();
 
             Mapper.Map(informationInDb, informationListViewModel);
@@ -39,10 +39,10 @@ namespace Fruit.Areas.Admin.Controllers
 
             var commonViewModel = new CommonViewModel
             {
-                InformationViewModel = informationListViewModel,
-                ContainerViewModel = containerListViewModel
+                InformationViewModelList = informationListViewModel,
+                ContainerViewModelList = containerListViewModel 
             };
-            
+
             return View(commonViewModel);
         }
 

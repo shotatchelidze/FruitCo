@@ -12,11 +12,11 @@ namespace Fruit.App_Start
     {
         public MappingProfile()
         {
-            Mapper.CreateMap<Information, InformationViewModel>();
+            Mapper.CreateMap<Information, InformationViewModelList>();
             Mapper.CreateMap<Container, ContainerViewModel>();
 
 
-            Mapper.CreateMap<InformationViewModel, Information>();
+            Mapper.CreateMap<InformationViewModelList, Information>();
             Mapper.CreateMap<ContainerViewModel, Container>();
 
         }

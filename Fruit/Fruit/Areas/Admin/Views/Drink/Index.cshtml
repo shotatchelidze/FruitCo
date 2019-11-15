@@ -8,29 +8,27 @@
 
 @using (Html.BeginForm("UpdateInformation", "Drink", FormMethod.Post))
 {
-    for (int i = 2; i < 4; i++)
+    for (int i = 0; i < 2; i++)
     {
-        @Html.HiddenFor(c => c.InformationViewModel[i].Id)
+        @Html.HiddenFor(c => c.InformationViewModelList[i].Id)
 
         <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModel[i].Title)
-            @Html.TextAreaFor(c => c.InformationViewModel[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+            @Html.LabelFor(c => c.InformationViewModelList[i].Title)
+            @Html.TextAreaFor(c => c.InformationViewModelList[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
 
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModel[i].Subtitle)
-            @Html.TextAreaFor(c => c.InformationViewModel[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+            @Html.LabelFor(c => c.InformationViewModelList[i].Subtitle)
+            @Html.TextAreaFor(c => c.InformationViewModelList[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
 
         </div>
         <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModel[i].Text)
-            @Html.TextAreaFor(c => c.InformationViewModel[i].Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+            @Html.LabelFor(c => c.InformationViewModelList[i].Text)
+            @Html.TextAreaFor(c => c.InformationViewModelList[i].Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
         </div>
-       
-        @Html.HiddenFor(c => c.InformationViewModel[i])
-
     }
+
     <button type="submit" class="btn btn-primary">შენახვა</button>
 
 }

@@ -20,22 +20,22 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
 
-            //context.Information.AddOrUpdate(x => x.Id,
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" }
-            //    );
+            context.Information.AddOrUpdate(x => x.Id,
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
+                new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" }
+                );
 
-            //context.Container.AddOrUpdate(x => x.Id,
-            //    new Container() { Name ="შესავსები"},
-            //    new Container() { Name ="შესავსები"},
-            //    new Container() { Name ="შესავსები"}
-            //    );
+            context.Container.AddOrUpdate(x => x.Id,
+                new Container() { Name = "შესავსები" },
+                new Container() { Name = "შესავსები" },
+                new Container() { Name = "შესავსები" }
+                );
         }
     }
 }

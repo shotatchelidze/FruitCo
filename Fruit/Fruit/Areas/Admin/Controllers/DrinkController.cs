@@ -31,7 +31,7 @@ namespace Fruit.Areas.Admin.Controllers
             var informationInDb = _context.Information.Take(2).ToList();
             var containerInDb = _context.Container.ToList();
 
-            var informationListViewModel = new List<InformationViewModelList>();
+            var informationListViewModel = new List<InformationViewModel>();
             var containerListViewModel = new List<ContainerViewModel>();
 
             Mapper.Map(informationInDb, informationListViewModel);

@@ -10,50 +10,29 @@
 {
     for (int i = 0; i < 2; i++)
     {
-        @Html.HiddenFor(c => c.InformationViewModelList[i].Id)
+        <div class="card">
+            @Html.HiddenFor(c => c.InformationViewModelList[i].Id)
 
-        <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModelList[i].Title)
-            @Html.TextAreaFor(c => c.InformationViewModelList[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+            <div class="form-group">
+                @Html.LabelFor(c => c.InformationViewModelList[i].Title)
+                @Html.TextAreaFor(c => c.InformationViewModelList[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
 
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(c => c.InformationViewModelList[i].Subtitle)
+                @Html.TextAreaFor(c => c.InformationViewModelList[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(c => c.InformationViewModelList[i].Text)
+                @Html.TextAreaFor(c => c.InformationViewModelList[i].Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+            </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModelList[i].Subtitle)
-            @Html.TextAreaFor(c => c.InformationViewModelList[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModelList[i].Text)
-            @Html.TextAreaFor(c => c.InformationViewModelList[i].Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-        </div>
     }
-
     <button type="submit" class="btn btn-primary">შენახვა</button>
 
 }
 
 
-@*@using (Html.BeginForm("UpdateInformation", "Drink", FormMethod.Post))
-    {
-
-        @Html.HiddenFor(c => c.InformationViewModel.ElementAtOrDefault(3).Id)
-
-        <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(3).Title)
-            @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(3).Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-            <button type="submit" class="btn btn-primary">შენახვა</button>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(3).Subtitle)
-            @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(3).Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-            <button type="submit" class="btn btn-primary">შენახვა</button>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(c => c.InformationViewModel.ElementAtOrDefault(3).Text)
-            @Html.TextAreaFor(c => c.InformationViewModel.ElementAtOrDefault(3).Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-            <button type="submit" class="btn btn-primary">შენახვა</button>
-        </div>
-
-    }*@

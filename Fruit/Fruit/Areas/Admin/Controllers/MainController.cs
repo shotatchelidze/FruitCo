@@ -30,7 +30,7 @@ namespace Fruit.Areas.Admin.Controllers
         public ActionResult Index()
         {
 
-            var informationInDb = _context.Information.ToList();
+            var informationInDb = _context.Information.ToList().Take(2);
 
             var informationListViewModel = new List<InformationViewModel>();
 

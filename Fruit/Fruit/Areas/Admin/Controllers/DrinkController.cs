@@ -28,7 +28,7 @@ namespace Fruit.Areas.Admin.Controllers
         // GET: Admin/Drink
         public ActionResult Index()
         {
-            var informationInDb = _context.Information.Take(2).ToList();
+            var informationInDb = _context.Information.ToList().Skip(2).Take(2);
             var containerInDb = _context.Container.ToList();
 
             var informationListViewModel = new List<InformationViewModel>();

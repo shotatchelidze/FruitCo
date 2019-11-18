@@ -47,6 +47,7 @@ namespace Fruit.Areas.Admin.Controllers
             Mapper.Map(model, informationInDb);
 
             _context.SaveChanges();
+            //sss
 
             return RedirectToAction("Index", "Main");
         }

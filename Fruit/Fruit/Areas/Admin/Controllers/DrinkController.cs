@@ -42,7 +42,7 @@ namespace Fruit.Areas.Admin.Controllers
                 InformationViewModelList = informationListViewModel,
                 ContainerViewModelList = containerListViewModel 
             };
-
+            
             return View(commonViewModel);
         }
 

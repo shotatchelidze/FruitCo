@@ -19,7 +19,9 @@ namespace Fruit.Models
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {   
+    {
+        public DbSet<Image> ImagePath { get; set; }
+        public DbSet<Container> Container { get; set; }
         public DbSet<Information> Information { get; set; }
 
         public ApplicationDbContext()

@@ -9,15 +9,15 @@ namespace Fruit.Models
 {
     public class Information
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Column(TypeName = "nvarchar"),MaxLength(50)]
         public string Title { get; set; }
 
+        [Column(TypeName = "nvarchar"),MaxLength(1000)]
         public string Subtitle { get; set; }
-        
-        public string Text { get; set; }
 
+        [Column(TypeName = "nvarchar")]
+        public string Description { get; set; }
     }
 }

@@ -29,7 +29,6 @@ namespace Fruit.Areas.Admin.Controllers
         // GET: Admin/Main
         public ActionResult Index()
         {
-
             var informationInDb = _context.Information.ToList().Take(2);
 
             var informationListViewModel = new List<InformationViewModel>();
@@ -40,15 +39,15 @@ namespace Fruit.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(InformationViewModel model)
+        public ActionResult Update(List<InformationViewModel> model)
         {
-            var informationInDb = _context.Information.SingleOrDefault(c => c.Id == model.Id);
+            //var informationInDb = _context.Information.SingleOrDefault(c => c.Id == model.Id);
+            var informationInDb = _context.Information.ToList();
 
             Mapper.Map(model, informationInDb);
 
             _context.SaveChanges();
-            //sss
-
+            
             return RedirectToAction("Index", "Main");
         }
 

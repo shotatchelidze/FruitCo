@@ -198,8 +198,17 @@
     <Compile Include="Migrations\201911091834154_AddContainer.Designer.cs">
       <DependentUpon>201911091834154_AddContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911201143478_AddImageModel.cs" />
+    <Compile Include="Migrations\201911201143478_AddImageModel.Designer.cs">
+      <DependentUpon>201911201143478_AddImageModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911271026251_ChangeInformationTableTextoToDescription.cs" />
+    <Compile Include="Migrations\201911271026251_ChangeInformationTableTextoToDescription.Designer.cs">
+      <DependentUpon>201911271026251_ChangeInformationTableTextoToDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Container.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Information.cs" />
@@ -436,6 +445,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911091834154_AddContainer.resx">
       <DependentUpon>201911091834154_AddContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911201143478_AddImageModel.resx">
+      <DependentUpon>201911201143478_AddImageModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911271026251_ChangeInformationTableTextoToDescription.resx">
+      <DependentUpon>201911271026251_ChangeInformationTableTextoToDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

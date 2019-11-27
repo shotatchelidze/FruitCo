@@ -5,53 +5,53 @@
 }
 
 <h2>Index</h2>
-<div class="card card-primary">
-    <div class="card-header">
-        <h3 class="card-title">Area Chart</h3>
-
-        <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-        </div>
-    </div>
-    <div class="card-body" style="display: block;">
-        <div class="chart">
-            <div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-            <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 764px;" width="764" height="250" class="chartjs-render-monitor"></canvas>
-        </div>
-    </div>
-    <!-- /.card-body -->
-</div>
-
 @using (Html.BeginForm("UpdateInformation", "Drink", FormMethod.Post))
 {
     for (int i = 0; i < 2; i++)
     {
-        <div class="card">
-            @Html.HiddenFor(c => c.InformationViewModelList[i].Id)
+        @Html.HiddenFor(c => c.InformationViewModelList[i].Id)
 
-            <div class="form-group">
-                @Html.LabelFor(c => c.InformationViewModelList[i].Title)
-                @Html.TextAreaFor(c => c.InformationViewModelList[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">ინფორმაცია</h3>
 
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
             </div>
+            <div class="card-body" style="display: block;">
+                <div class="chart">
+                    <div class="chartjs-size-monitor">
+                        <div class="form-group">
+                            @Html.LabelFor(c => c.InformationViewModelList[i].Title)
+                            @Html.TextAreaFor(c => c.InformationViewModelList[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(c => c.InformationViewModelList[i].Subtitle)
+                            @Html.TextAreaFor(c => c.InformationViewModelList[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
 
-            <div class="form-group">
-                @Html.LabelFor(c => c.InformationViewModelList[i].Subtitle)
-                @Html.TextAreaFor(c => c.InformationViewModelList[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(c => c.InformationViewModelList[i].Description)
+                            @Html.TextAreaFor(c => c.InformationViewModelList[i].Description, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+                        </div>
+                        <div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div>
+                    </div>
+                    @*<canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 764px;" width="764" height="250" class="chartjs-render-monitor"></canvas>*@
+                </div>
             </div>
-            <div class="form-group">
-                @Html.LabelFor(c => c.InformationViewModelList[i].Text)
-                @Html.TextAreaFor(c => c.InformationViewModelList[i].Text, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-            </div>
+            <!-- /.card-body -->
         </div>
-
     }
     <button type="submit" class="btn btn-primary">შენახვა</button>
-
 }
+
+
+
+
+
 
 

@@ -18,6 +18,6 @@ namespace Fruit.Models
         public string Subtitle { get; set; }
 
         [Column(TypeName = "nvarchar")]
-        public string Text { get; set; }
+        public string Description { get; set; }
     }
 }

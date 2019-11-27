@@ -21,14 +21,14 @@
             //  to avoid creating duplicate seed data.
 
             //context.Information.AddOrUpdate(x => x.Id,
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Text = "შესავსები ველი" }
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
+            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" }
             //    );
 
             //context.Container.AddOrUpdate(x => x.Id,

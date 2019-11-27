@@ -13,20 +13,20 @@
     {
         for (int i = 0; i < 2; i++)
         {
-            @Html.HiddenFor(c => c.ElementAtOrDefault(i).Id)
+            @Html.HiddenFor(c => Model[i].Id)
 
             <div class="form-group">
-                @Html.LabelFor(c => c.ElementAtOrDefault(i).Title)
-                @Html.TextAreaFor(c => c.ElementAtOrDefault(i).Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+                @Html.LabelFor(c => Model[i].Title)
+                @Html.TextAreaFor(c => Model[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(c => c.ElementAtOrDefault(i).Subtitle)
-                @Html.TextAreaFor(c => c.ElementAtOrDefault(i).Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+                @Html.LabelFor(c => Model[i].Subtitle)
+                @Html.TextAreaFor(c => Model[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
             </div>
             <div class="form-group">
-                @Html.LabelFor(c => c.ElementAtOrDefault(i).Description)
-                @Html.TextAreaFor(c => c.ElementAtOrDefault(i).Description, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
+                @Html.LabelFor(c => Model[i].Description)
+                @Html.TextAreaFor(c => Model[i].Description, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
 
             </div>
         }
@@ -37,9 +37,9 @@
 {
     for (int i = 0; i < 2; i++)
     {
-        @Html.HiddenFor(c => c.ElementAtOrDefault(i).Id)
+        @Html.HiddenFor(c => Model[i].Id)
 
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
                     <h3 class="card-title">General</h3>
@@ -52,19 +52,19 @@
                 <div class="card-body" style="display: block;">
                     <div class="form-group">
                         @Html.LabelFor(c => c.ElementAtOrDefault(i).Title)
-                        <textarea placeholder="შესავსები ველი" name="Title" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Title</textarea>
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Title", i)" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Title</textarea>
                     </div>
                 </div>
                 <div class="card-body" style="display: block;">
                     <div class="form-group">
                         @Html.LabelFor(c => c.ElementAtOrDefault(i).Subtitle)
-                        <textarea placeholder="შესავსები ველი" name="Subtitle" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Subtitle </textarea>
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Subtitle", i)" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Subtitle </textarea>
                     </div>
                 </div>
                 <div class="card-body" style="display: block;">
                     <div class="form-group">
                         @Html.LabelFor(c => c.ElementAtOrDefault(i).Description)
-                        <textarea placeholder="შესავსები ველი" name="Description" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Description</textarea>
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Description", i)" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Description</textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->

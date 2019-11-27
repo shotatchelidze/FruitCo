@@ -41,14 +41,23 @@ namespace Fruit.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Update(List<InformationViewModel> model)
         {
+            try
+            {
+                var informationInDb = _context.Information.ToList();
+
+                Mapper.Map(model, informationInDb);
+
+                _context.SaveChanges();
+
+                return RedirectToAction("Index", "Main");
+            }
+            catch (Exception ex)
+            {
+                
+                throw;
+            }
             //var informationInDb = _context.Information.SingleOrDefault(c => c.Id == model.Id);
-            var informationInDb = _context.Information.ToList();
-
-            Mapper.Map(model, informationInDb);
-
-            _context.SaveChanges();
             
-            return RedirectToAction("Index", "Main");
         }
 
         

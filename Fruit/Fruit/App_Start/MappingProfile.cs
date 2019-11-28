@@ -16,7 +16,8 @@ namespace Fruit.App_Start
             Mapper.CreateMap<Container, ContainerViewModel>();
 
 
-            Mapper.CreateMap<InformationViewModel, Information>();
+            Mapper.CreateMap<InformationViewModel, Information>()
+                .ForMember(m => m.Id, opt => opt.Ignore());
             Mapper.CreateMap<ContainerViewModel, Container>();
 
         }

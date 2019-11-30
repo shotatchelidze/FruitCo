@@ -1,0 +1,1939 @@
+$color-white: #ffffff;
+$color-black: #111111;
+$color-primary: #39b549;
+$color-secondary: #221f1f;
+$color-third: #fff8e7;
+$color-fourth: #e8fcff;
+$color-button-one: #d9df20;
+$color-button-two: #fafe8a;
+
+* {
+    padding: 0;
+    margin: 0;
+    display: block;
+
+    title {
+        display: none;
+    }
+
+    body {
+
+        .header {
+            z-index: 5;
+
+            .header-background {
+                top: 56px;
+                z-index: 6;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 161px;
+                height: 161px;
+                border-radius: 50%;
+                background-color: $color-white;
+                -webkit-box-shadow: 0px 10px 25px -5px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 10px 25px -5px rgba(0,0,0,0.75);
+                box-shadow: 0px 10px 25px -5px rgba(0,0,0,0.75);
+                
+                &:hover {
+                    top: 54px;
+                    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.75);
+                    box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.75);
+                    transition: all .2s;
+                }
+
+                &:active {
+                    top: 55px;
+                    -webkit-box-shadow: 0px 20px 30px -5px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 20px 30px -5px rgba(0,0,0,0.75);
+                    box-shadow: 0px 20px 30px -5px rgba(0,0,0,0.75);
+                    transition: all .4s;
+                }
+
+                .header-logo {
+                    z-index: 7;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+
+        }
+
+        .middle-image {
+            position: absolute;
+            z-index: 11;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            animation-name: middleImage;
+            animation-duration: .5s;
+        }
+    
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            top: 0;
+            overflow-x: hidden;
+    
+            .centered {
+    
+                h1 {
+                    z-index: 10;
+                    position: absolute;
+                    font-size: 57px;
+                    margin-top: 261px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    font-family: 'Conv_FiraGO-ExtraBold';
+
+                    animation-name: moveHeadingUp;
+                    animation-duration: .7s;
+                }
+    
+                p {
+                    z-index: 10;
+                    position: absolute;
+                    font-size: 27px;
+                    margin-top: 319px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 300px;
+                    font-family: 'Conv_FiraGO-SemiBold';
+
+                    animation-name: moveHeadingUp;
+                    animation-duration: .7s;
+                }
+
+                a {
+                    z-index: 10;
+                    position: absolute;
+                    margin-top: 510px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    padding: 25px 46px;
+                    outline: none;
+                    border: none;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-size: 18px;
+                    font-family: 'Conv_FiraGO-Bold';
+                    transform-style: preserve-3d;
+
+                    animation-name: moveButtonUp;
+                    animation-duration: .7s;
+
+                    &:hover {
+                        margin-top: 507px;
+                        transition: all .2s;
+                    }
+    
+                    &:active {
+                        margin-top: 508px;
+                        transition: all .2s;
+                    }
+
+                    &:hover::after {
+                        content: "";
+                        position: absolute;
+                        background-color: $color-button-one;
+                        height: 100%;
+                        width: 100%;
+                        top: 6px;
+                        left: 6px;
+                        z-index: -1;
+                        border-radius: 50px;
+                        transition: all .05s;
+                        transform: translateZ(-1px);
+                    }
+
+                }
+
+                .button-left {
+                    color: $color-black;
+                    background-color: $color-white;
+
+                    &::selection {
+                        background: $color-primary;
+                    }
+
+                    &::-moz-selection {
+                        background: $color-primary;
+                    }
+
+                    &:active::after {
+                        content: "";
+                        position: absolute;
+                        background-color: $color-primary;
+                        height: 100%;
+                        width: 100%;
+                        top: 12px;
+                        left: 12px;
+                        z-index: -2;
+                        border-radius: 50px;
+                        transition: all .05s;
+                    }
+                    
+                }
+
+                .button-right {
+                    color: $color-white;
+                    background-color: $color-primary;
+
+                    &::selection {
+                        background: $color-secondary;
+                    }
+    
+                    &::-moz-selection {
+                        background: $color-secondary;
+                    }
+
+                    &:active::after {
+                        content: "";
+                        position: absolute;
+                        background-color: $color-button-two;
+                        height: 100%;
+                        width: 100%;
+                        top: 12px;
+                        left: 12px;
+                        z-index: -2;
+                        border-radius: 50px;
+                        transition: all .05s;
+                    }
+
+                }
+
+            }
+
+        }
+    
+        .left {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            background-color: $color-secondary;
+            z-index: 3;
+    
+            h1 {
+                color: $color-white;
+
+                &::selection {
+                    background: $color-primary;
+                }
+
+                &::-moz-selection {
+                    background: $color-primary;
+                }
+
+            }
+    
+            p {
+                color: $color-white;
+
+                &::selection {
+                    background: $color-primary;
+                }
+
+                &::-moz-selection {
+                    background: $color-primary;
+                }
+
+            }
+        
+            .left-one {
+                position: relative;
+                left: 29%;
+                top: -21%;
+                width: 550px;
+                height: auto;
+                -ms-transform: rotate(314deg);
+                -webkit-transform: rotate(314deg);
+                transform: rotate(314deg);
+
+                animation-name: leftImageOne;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+
+            }
+    
+            .left-two {
+                position: relative;
+                left: -12%;
+                top: -24%;
+                width: 365px;
+                height: 366px;
+                -ms-transform: rotate(290deg);
+                -webkit-transform: rotate(290deg);
+                transform: rotate(290deg);
+
+                animation-name: leftImageTwo;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+
+            }
+    
+            .left-three {
+                position: relative;
+                left: 71%;
+                top: 7%;
+                width: 203px;
+                height: 350px;
+                -ms-transform: rotate(165deg);
+                -webkit-transform: rotate(165deg);
+                transform: rotate(165deg);
+
+                animation-name: leftImageThree;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+
+            }
+    
+            .left-four {
+                position: relative;
+                left: -8%;
+                top: -51%;
+                width: 819px;
+                height: auto;
+                -ms-transform: rotate(140deg) scaleX(-1);
+                -webkit-transform: rotate(140deg) scaleX(-1);
+                transform: rotate(140deg) scaleX(-1);
+
+                animation-name: leftImageFour;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+
+            }
+    
+            .left-five {
+                position: relative;
+                left: -21%;
+                top: -100%;
+                width: 659px;
+                height: 575px;
+                -ms-transform: rotate(22deg);
+                -webkit-transform: rotate(22deg);
+                transform: rotate(22deg);
+
+                animation-name: leftImageFive;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+
+            }
+    
+        }
+    
+        .right {
+            overflow: hidden;
+            right: 0;
+            background-image: linear-gradient($color-third, $color-fourth);
+            z-index: 4;
+    
+            h1 {
+                color: $color-primary;
+
+                &::selection {
+                    background: $color-secondary;
+                }
+
+                &::-moz-selection {
+                    background: $color-secondary;
+                }
+
+            }
+    
+            p {
+                color: $color-primary;
+
+                &::selection {
+                    background: $color-secondary;
+                }
+
+                &::-moz-selection {
+                    background: $color-secondary;
+                }
+
+            }
+
+            .right-one {
+                position: relative;
+                left: 19%;
+                top: 0;
+
+                animation-name: rightImageOne;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+
+            }
+    
+            .right-two {
+                position: relative;
+                left: 3%;
+                top: 58%;
+
+                animation-name: rightImageTwo;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+            }
+
+            .right-three {
+                position: relative;
+                left: 62%;
+                top: -33%;
+
+                animation-name: rightImageThree;
+                animation-duration: .5s;
+
+                &::selection {
+                    background: none;
+                }
+
+                &::-moz-selection {
+                    background: none;
+                }
+            }
+    
+        }
+
+    }
+
+    @keyframes moveHeadingUp {
+        0% {
+            opacity: 0;
+            padding-top: 75px;
+        }
+
+        100% {
+            opacity: 1;
+            padding-top: 0;
+        }
+
+    }
+    @keyframes moveButtonUp {
+        0% {
+            margin-top: 585px;
+        }
+
+        100% {
+            margin-top: 510px;
+        }
+    }
+    @keyframes leftImageOne {
+        0% {
+            left: 26%;
+        }
+
+        100% {
+            left: 29%;
+        }
+
+    }
+    @keyframes leftImageTwo {
+        0% {
+            top: -27%;
+        }
+
+        100% {
+            top: -24%;
+        }
+
+    }
+    @keyframes leftImageThree {
+        0% {
+            left: 74%;
+        }
+
+        100% {
+            left: 71%;
+        }
+
+    }
+    @keyframes leftImageFour {
+        0% {
+            left: -11%;
+        }
+
+        100% {
+            left: -8%;
+        }
+
+    }
+    @keyframes leftImageFive {
+        0% {
+            top: -97%;
+        }
+
+        100% {
+            top: -100%;
+        }
+
+    }
+    @keyframes middleImage {
+        0% {
+            top: 63%;
+        }
+
+        100% {
+            top: 60%;
+        }
+
+    }
+    @keyframes rightImageOne {
+        0% {
+            top: -3%;
+        }
+
+        100% {
+            top: 0;
+        }
+
+    }
+    @keyframes rightImageTwo {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: 3%;
+        }
+
+    }
+    @keyframes rightImageThree {
+        0% {
+            left: 65%;
+        }
+
+        100% {
+            left: 62%;
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 1680px) {
+    * {
+
+        body {
+    
+            .middle-image {
+                position: absolute;
+                z-index: 11;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+    
+                animation-name: middleImage;
+                animation-duration: .5s;
+            }
+        
+            .left {
+            
+                .left-one {
+                    position: relative;
+                    left: 26%;
+                    top: -21%;
+                    width: 530px;
+                    height: auto;
+                    -ms-transform: rotate(314deg);
+                    -webkit-transform: rotate(314deg);
+                    transform: rotate(314deg);
+    
+                    animation-name: leftImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-two {
+                    position: relative;
+                    left: -14%;
+                    top: -24%;
+                    width: 365px;
+                    height: 366px;
+                    -ms-transform: rotate(290deg);
+                    -webkit-transform: rotate(290deg);
+                    transform: rotate(290deg);
+    
+                    animation-name: leftImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-three {
+                    position: relative;
+                    left: 71%;
+                    top: 7%;
+                    width: 203px;
+                    height: 350px;
+                    -ms-transform: rotate(165deg);
+                    -webkit-transform: rotate(165deg);
+                    transform: rotate(165deg);
+    
+                    animation-name: leftImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-four {
+                    position: relative;
+                    left: -16%;
+                    top: -51%;
+                    width: 778px;
+                    height: auto;
+                    -ms-transform: rotate(140deg) scaleX(-1);
+                    -webkit-transform: rotate(140deg) scaleX(-1);
+                    transform: rotate(140deg) scaleX(-1);
+    
+                    animation-name: leftImageFour;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-five {
+                    position: relative;
+                    left: -24%;
+                    top: -97%;
+                    width: 659px;
+                    height: 575px;
+                    -ms-transform: rotate(22deg);
+                    -webkit-transform: rotate(22deg);
+                    transform: rotate(22deg);
+    
+                    animation-name: leftImageFive;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+            }
+        
+            .right {
+    
+                .right-one {
+                    position: relative;
+                    left: 19%;
+                    top: 0;
+    
+                    animation-name: rightImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .right-two {
+                    position: relative;
+                    left: 3%;
+                    top: 58%;
+    
+                    animation-name: rightImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+    
+                .right-three {
+                    position: relative;
+                    left: 62%;
+                    top: -33%;
+    
+                    animation-name: rightImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+        
+            }
+    
+        }
+    
+        @keyframes moveHeadingUp {
+            0% {
+                opacity: 0;
+                padding-top: 75px;
+            }
+    
+            100% {
+                opacity: 1;
+                padding-top: 0;
+            }
+    
+        }
+        @keyframes moveButtonUp {
+            0% {
+                margin-top: 585px;
+            }
+    
+            100% {
+                margin-top: 510px;
+            }
+        }
+        @keyframes leftImageOne {
+            0% {
+                left: 23%;
+            }
+    
+            100% {
+                left: 26%;
+            }
+    
+        }
+        @keyframes leftImageTwo {
+            0% {
+                top: -27%;
+            }
+    
+            100% {
+                top: -24%;
+            }
+    
+        }
+        @keyframes leftImageThree {
+            0% {
+                left: 74%;
+            }
+    
+            100% {
+                left: 71%;
+            }
+    
+        }
+        @keyframes leftImageFour {
+            0% {
+                left: -19%;
+            }
+    
+            100% {
+                left: -16%;
+            }
+    
+        }
+        @keyframes leftImageFive {
+            0% {
+                top: -94%;
+            }
+    
+            100% {
+                top: -97%;
+            }
+    
+        }
+        @keyframes middleImage {
+            0% {
+                top: 58%;
+            }
+    
+            100% {
+                top: 55%;
+            }
+    
+        }
+        @keyframes rightImageOne {
+            0% {
+                top: -3%;
+            }
+    
+            100% {
+                top: 0;
+            }
+    
+        }
+        @keyframes rightImageTwo {
+            0% {
+                left: 0;
+            }
+    
+            100% {
+                left: 3%;
+            }
+    
+        }
+        @keyframes rightImageThree {
+            0% {
+                left: 65%;
+            }
+    
+            100% {
+                left: 62%;
+            }
+    
+        }
+    
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    * {
+    
+        body {
+    
+            .middle-image {
+                position: absolute;
+                z-index: 11;
+                top: 63%;
+                left: 50%;
+                width: auto;
+                height: 450px;
+                transform: translate(-50%, -50%);
+    
+                animation-name: middleImage;
+                animation-duration: .5s;
+            }
+        
+            .left {
+            
+                .left-one {
+                    position: relative;
+                    left: 24%;
+                    top: -21%;
+                    width: 500px;
+                    height: auto;
+                    -ms-transform: rotate(314deg);
+                    -webkit-transform: rotate(314deg);
+                    transform: rotate(314deg);
+    
+                    animation-name: leftImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-two {
+                    position: relative;
+                    left: -18%;
+                    top: -22%;
+                    width: 345px;
+                    height: 346px;
+                    -ms-transform: rotate(290deg);
+                    -webkit-transform: rotate(290deg);
+                    transform: rotate(290deg);
+    
+                    animation-name: leftImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-three {
+                    visibility: hidden;
+                    position: relative;
+                    left: 71%;
+                    top: 7%;
+                    width: 203px;
+                    height: 350px;
+                    -ms-transform: rotate(165deg);
+                    -webkit-transform: rotate(165deg);
+                    transform: rotate(165deg);
+    
+                    animation-name: leftImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-four {
+                    position: relative;
+                    left: -16%;
+                    top: -51%;
+                    width: 720px;
+                    height: auto;
+                    -ms-transform: rotate(140deg) scaleX(-1);
+                    -webkit-transform: rotate(140deg) scaleX(-1);
+                    transform: rotate(140deg) scaleX(-1);
+    
+                    animation-name: leftImageFour;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-five {
+                    position: relative;
+                    left: -24%;
+                    top: -97%;
+                    width: 659px;
+                    height: 575px;
+                    -ms-transform: rotate(22deg);
+                    -webkit-transform: rotate(22deg);
+                    transform: rotate(22deg);
+    
+                    animation-name: leftImageFive;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+            }
+        
+            .right {
+    
+                .right-one {
+                    position: relative;
+                    left: 19%;
+                    top: 0;
+    
+                    animation-name: rightImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .right-two {
+                    position: relative;
+                    left: 3%;
+                    top: 59%;
+                    height: auto;
+                    width: 462px;
+    
+                    animation-name: rightImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+    
+                .right-three {
+                    position: relative;
+                    left: 62%;
+                    top: -33%;
+    
+                    animation-name: rightImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+        
+            }
+    
+        }
+    
+        @keyframes moveHeadingUp {
+            0% {
+                opacity: 0;
+                padding-top: 75px;
+            }
+    
+            100% {
+                opacity: 1;
+                padding-top: 0;
+            }
+    
+        }
+        @keyframes moveButtonUp {
+            0% {
+                margin-top: 585px;
+            }
+    
+            100% {
+                margin-top: 510px;
+            }
+        }
+        @keyframes leftImageOne {
+            0% {
+                left: 21%;
+            }
+    
+            100% {
+                left: 24%;
+            }
+    
+        }
+        @keyframes leftImageTwo {
+            0% {
+                top: -25%;
+            }
+    
+            100% {
+                top: -22%;
+            }
+    
+        }
+        @keyframes leftImageThree {
+            0% {
+                left: 74%;
+            }
+    
+            100% {
+                left: 71%;
+            }
+    
+        }
+        @keyframes leftImageFour {
+            0% {
+                left: -19%;
+            }
+    
+            100% {
+                left: -16%;
+            }
+    
+        }
+        @keyframes leftImageFive {
+            0% {
+                top: -94%;
+            }
+    
+            100% {
+                top: -97%;
+            }
+    
+        }
+        @keyframes middleImage {
+            0% {
+                top: 66%;
+            }
+    
+            100% {
+                top: 63%;
+            }
+    
+        }
+        @keyframes rightImageOne {
+            0% {
+                top: -3%;
+            }
+    
+            100% {
+                top: 0;
+            }
+    
+        }
+        @keyframes rightImageTwo {
+            0% {
+                left: 0;
+            }
+    
+            100% {
+                left: 3%;
+            }
+    
+        }
+        @keyframes rightImageThree {
+            0% {
+                left: 65%;
+            }
+    
+            100% {
+                left: 62%;
+            }
+    
+        }
+    
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+* {
+    
+        body {
+    
+            .middle-image {
+                position: absolute;
+                z-index: 11;
+                top: 66%;
+                left: 50%;
+                width: auto;
+                height: 330px;
+                transform: translate(-50%, -50%);
+    
+                animation-name: middleImage;
+                animation-duration: .5s;
+            }
+        
+            .left {
+            
+                .left-one {
+                    position: relative;
+                    left: 18%;
+                    top: -21%;
+                    width: 450px;
+                    height: auto;
+                    -ms-transform: rotate(314deg);
+                    -webkit-transform: rotate(314deg);
+                    transform: rotate(314deg);
+    
+                    animation-name: leftImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-two {
+                    position: relative;
+                    left: -33%;
+                    top: -17%;
+                    width: 325px;
+                    height: 326px;
+                    -ms-transform: rotate(290deg);
+                    -webkit-transform: rotate(290deg);
+                    transform: rotate(290deg);
+    
+                    animation-name: leftImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-three {
+                    position: relative;
+                    left: 71%;
+                    top: 7%;
+                    width: 203px;
+                    height: 350px;
+                    -ms-transform: rotate(165deg);
+                    -webkit-transform: rotate(165deg);
+                    transform: rotate(165deg);
+    
+                    animation-name: leftImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-four {
+                    visibility: hidden;
+                    position: relative;
+                    left: -16%;
+                    top: -51%;
+                    width: 720px;
+                    height: auto;
+                    -ms-transform: rotate(140deg) scaleX(-1);
+                    -webkit-transform: rotate(140deg) scaleX(-1);
+                    transform: rotate(140deg) scaleX(-1);
+    
+                    animation-name: leftImageFour;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-five {
+                    visibility: hidden;
+                    position: relative;
+                    left: -24%;
+                    top: -97%;
+                    width: 659px;
+                    height: 575px;
+                    -ms-transform: rotate(22deg);
+                    -webkit-transform: rotate(22deg);
+                    transform: rotate(22deg);
+    
+                    animation-name: leftImageFive;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+            }
+        
+            .right {
+    
+                .right-one {
+                    position: relative;
+                    left: 19%;
+                    top: 0;
+    
+                    animation-name: rightImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .right-two {
+                    visibility: hidden;
+                    position: relative;
+                    left: 3%;
+                    top: 59%;
+                    height: auto;
+                    width: 462px;
+    
+                    animation-name: rightImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+    
+                .right-three {
+                    position: relative;
+                    left: 62%;
+                    top: -33%;
+    
+                    animation-name: rightImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+        
+            }
+    
+        }
+    
+        @keyframes moveHeadingUp {
+            0% {
+                opacity: 0;
+                padding-top: 75px;
+            }
+    
+            100% {
+                opacity: 1;
+                padding-top: 0;
+            }
+    
+        }
+        @keyframes moveButtonUp {
+            0% {
+                margin-top: 585px;
+            }
+    
+            100% {
+                margin-top: 510px;
+            }
+        }
+        @keyframes leftImageOne {
+            0% {
+                left: 15%;
+            }
+    
+            100% {
+                left: 18%;
+            }
+    
+        }
+        @keyframes leftImageTwo {
+            0% {
+                top: -20%;
+            }
+    
+            100% {
+                top: -17%;
+            }
+    
+        }
+        @keyframes leftImageThree {
+            0% {
+                left: 74%;
+            }
+    
+            100% {
+                left: 71%;
+            }
+    
+        }
+        @keyframes leftImageFour {
+            0% {
+                left: -19%;
+            }
+    
+            100% {
+                left: -16%;
+            }
+    
+        }
+        @keyframes leftImageFive {
+            0% {
+                top: -94%;
+            }
+    
+            100% {
+                top: -97%;
+            }
+    
+        }
+        @keyframes middleImage {
+            0% {
+                top: 69%;
+            }
+    
+            100% {
+                top: 66%;
+            }
+    
+        }
+        @keyframes rightImageOne {
+            0% {
+                top: -3%;
+            }
+    
+            100% {
+                top: 0;
+            }
+    
+        }
+        @keyframes rightImageTwo {
+            0% {
+                left: 0;
+            }
+    
+            100% {
+                left: 3%;
+            }
+    
+        }
+        @keyframes rightImageThree {
+            0% {
+                left: 65%;
+            }
+    
+            100% {
+                left: 62%;
+            }
+    
+        }
+    
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+    
+        body {
+    
+            .header {
+                z-index: 5;
+
+                .header-logo {
+                    z-index: 7;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+    
+            }
+    
+            .middle-image {
+                position: absolute;
+                z-index: 11;
+                top: 66%;
+                left: 50%;
+                width: auto;
+                height: 220px;
+                transform: translate(-50%, -100%) rotate(-90deg);
+    
+                animation-name: middleImage;
+                animation-duration: .5s;
+            }
+        
+            .split {
+                height: 50%;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                overflow-x: hidden;
+        
+                .centered {
+        
+                    h1 {
+                        z-index: 10;
+                        position: absolute;
+                        font-size: 57px;
+                        margin-top: 261px;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        font-family: 'Conv_FiraGO-ExtraBold';
+    
+                        animation-name: moveHeadingUp;
+                        animation-duration: .7s;
+                    }
+        
+                    p {
+                        z-index: 10;
+                        position: absolute;
+                        font-size: 27px;
+                        margin-top: 319px;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        width: 300px;
+                        font-family: 'Conv_FiraGO-SemiBold';
+    
+                        animation-name: moveHeadingUp;
+                        animation-duration: .7s;
+                    }
+    
+                }
+    
+            }
+        
+            .left {
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                background-color: $color-secondary;
+                z-index: 3;
+        
+                h1 {
+                    color: $color-white;
+    
+                    &::selection {
+                        background: $color-primary;
+                    }
+    
+                    &::-moz-selection {
+                        background: $color-primary;
+                    }
+    
+                }
+        
+                p {
+                    color: $color-white;
+    
+                    &::selection {
+                        background: $color-primary;
+                    }
+    
+                    &::-moz-selection {
+                        background: $color-primary;
+                    }
+    
+                }
+            
+                .left-one {
+                    position: relative;
+                    left: 18%;
+                    top: -21%;
+                    width: 450px;
+                    height: auto;
+                    -ms-transform: rotate(314deg);
+                    -webkit-transform: rotate(314deg);
+                    transform: rotate(314deg);
+    
+                    animation-name: leftImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-two {
+                    position: relative;
+                    left: -33%;
+                    top: -17%;
+                    width: 325px;
+                    height: 326px;
+                    -ms-transform: rotate(290deg);
+                    -webkit-transform: rotate(290deg);
+                    transform: rotate(290deg);
+    
+                    animation-name: leftImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-three {
+                    position: relative;
+                    left: 71%;
+                    top: 7%;
+                    width: 203px;
+                    height: 350px;
+                    -ms-transform: rotate(165deg);
+                    -webkit-transform: rotate(165deg);
+                    transform: rotate(165deg);
+    
+                    animation-name: leftImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-four {
+                    visibility: hidden;
+                    position: relative;
+                    left: -16%;
+                    top: -51%;
+                    width: 720px;
+                    height: auto;
+                    -ms-transform: rotate(140deg) scaleX(-1);
+                    -webkit-transform: rotate(140deg) scaleX(-1);
+                    transform: rotate(140deg) scaleX(-1);
+    
+                    animation-name: leftImageFour;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .left-five {
+                    visibility: hidden;
+                    position: relative;
+                    left: -24%;
+                    top: -97%;
+                    width: 659px;
+                    height: 575px;
+                    -ms-transform: rotate(22deg);
+                    -webkit-transform: rotate(22deg);
+                    transform: rotate(22deg);
+    
+                    animation-name: leftImageFive;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+            }
+        
+            .right {
+                overflow: hidden;
+                bottom: 0;
+                background-image: linear-gradient($color-third, $color-fourth);
+                z-index: 4;
+        
+                h1 {
+                    color: $color-primary;
+    
+                    &::selection {
+                        background: $color-secondary;
+                    }
+    
+                    &::-moz-selection {
+                        background: $color-secondary;
+                    }
+    
+                }
+        
+                p {
+                    color: $color-primary;
+    
+                    &::selection {
+                        background: $color-secondary;
+                    }
+    
+                    &::-moz-selection {
+                        background: $color-secondary;
+                    }
+    
+                }
+    
+                .right-one {
+                    position: relative;
+                    left: 19%;
+                    top: 0;
+    
+                    animation-name: rightImageOne;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+    
+                }
+        
+                .right-two {
+                    visibility: hidden;
+                    position: relative;
+                    left: 3%;
+                    top: 59%;
+                    height: auto;
+                    width: 462px;
+    
+                    animation-name: rightImageTwo;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+    
+                .right-three {
+                    position: relative;
+                    left: 62%;
+                    top: -33%;
+    
+                    animation-name: rightImageThree;
+                    animation-duration: .5s;
+    
+                    &::selection {
+                        background: none;
+                    }
+    
+                    &::-moz-selection {
+                        background: none;
+                    }
+                }
+        
+            }
+    
+        }
+    
+        @keyframes moveHeadingUp {
+            0% {
+                opacity: 0;
+                padding-top: 75px;
+            }
+    
+            100% {
+                opacity: 1;
+                padding-top: 0;
+            }
+    
+        }
+        @keyframes moveButtonUp {
+            0% {
+                margin-top: 585px;
+            }
+    
+            100% {
+                margin-top: 510px;
+            }
+        }
+        @keyframes leftImageOne {
+            0% {
+                left: 15%;
+            }
+    
+            100% {
+                left: 18%;
+            }
+    
+        }
+        @keyframes leftImageTwo {
+            0% {
+                top: -20%;
+            }
+    
+            100% {
+                top: -17%;
+            }
+    
+        }
+        @keyframes leftImageThree {
+            0% {
+                left: 74%;
+            }
+    
+            100% {
+                left: 71%;
+            }
+    
+        }
+        @keyframes leftImageFour {
+            0% {
+                left: -19%;
+            }
+    
+            100% {
+                left: -16%;
+            }
+    
+        }
+        @keyframes leftImageFive {
+            0% {
+                top: -94%;
+            }
+    
+            100% {
+                top: -97%;
+            }
+    
+        }
+        @keyframes middleImage {
+            0% {
+                left: 53%;
+            }
+    
+            100% {
+                left: 50%;
+            }
+    
+        }
+        @keyframes rightImageOne {
+            0% {
+                top: -3%;
+            }
+    
+            100% {
+                top: 0;
+            }
+    
+        }
+        @keyframes rightImageTwo {
+            0% {
+                left: 0;
+            }
+    
+            100% {
+                left: 3%;
+            }
+    
+        }
+        @keyframes rightImageThree {
+            0% {
+                left: 65%;
+            }
+    
+            100% {
+                left: 62%;
+            }
+    
+        }
+    
+    }
+
+}

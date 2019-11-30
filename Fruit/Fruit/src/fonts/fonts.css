@@ -1,0 +1,147 @@
+@font-face {
+	font-family: 'Conv_FiraGO-BookItalic';
+	src: url('Italic/FiraGO-BoldItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-BoldItalic.woff') format('woff'), url('Italic/FiraGO-BoldItalic.ttf') format('truetype'), url('Italic/FiraGO-BoldItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-ExtraBoldItalic';
+	src: url('Italic/FiraGO-ExtraBoldItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-ExtraBoldItalic.woff') format('woff'), url('Italic/FiraGO-ExtraBoldItalic.ttf') format('truetype'), url('Italic/FiraGO-ExtraBoldItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-ExtraLightItalic';
+	src: url('Italic/FiraGO-ExtraLightItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-ExtraLightItalic.woff') format('woff'), url('Italic/FiraGO-ExtraLightItalic.ttf') format('truetype'), url('Italic/FiraGO-ExtraLightItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-HeavyItalic';
+	src: url('Italic/FiraGO-HeavyItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-HeavyItalic.woff') format('woff'), url('Italic/FiraGO-HeavyItalic.ttf') format('truetype'), url('Italic/FiraGO-HeavyItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Italic';
+	src: url('Italic/FiraGO-Italic.eot');
+	src: local('☺'), url('Italic/FiraGO-Italic.woff') format('woff'), url('Italic/FiraGO-Italic.ttf') format('truetype'), url('Italic/FiraGO-Italic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-LightItalic';
+	src: url('Italic/FiraGO-LightItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-LightItalic.woff') format('woff'), url('Italic/FiraGO-LightItalic.ttf') format('truetype'), url('Italic/FiraGO-LightItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-MediumItalic';
+	src: url('Italic/FiraGO-MediumItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-MediumItalic.woff') format('woff'), url('Italic/FiraGO-MediumItalic.ttf') format('truetype'), url('Italic/FiraGO-MediumItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-SemiBoldItalic';
+	src: url('Italic/FiraGO-SemiBoldItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-SemiBoldItalic.woff') format('woff'), url('Italic/FiraGO-SemiBoldItalic.ttf') format('truetype'), url('Italic/FiraGO-SemiBoldItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-ThinItalic';
+	src: url('Italic/FiraGO-ThinItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-ThinItalic.woff') format('woff'), url('Italic/FiraGO-ThinItalic.ttf') format('truetype'), url('Italic/FiraGO-ThinItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-UltraLightItalic';
+	src: url('Italic/FiraGO-UltraLightItalic.eot');
+	src: local('☺'), url('Italic/FiraGO-UltraLightItalic.woff') format('woff'), url('Italic/FiraGO-UltraLightItalic.ttf') format('truetype'), url('Italic/FiraGO-UltraLightItalic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Bold';
+	src: url('Roman/FiraGO-Bold.eot');
+	src: local('☺'), url('Roman/FiraGO-Bold.woff') format('woff'), url('Roman/FiraGO-Bold.ttf') format('truetype'), url('Roman/FiraGO-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Book';
+	src: url('Roman/FiraGO-Book.eot');
+	src: local('☺'), url('Roman/FiraGO-Book.woff') format('woff'), url('Roman/FiraGO-Book.ttf') format('truetype'), url('Roman/FiraGO-Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-ExtraBold';
+	src: url('Roman/FiraGO-ExtraBold.eot');
+	src: local('☺'), url('Roman/FiraGO-ExtraBold.woff') format('woff'), url('Roman/FiraGO-ExtraBold.ttf') format('truetype'), url('Roman/FiraGO-ExtraBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-ExtraLight';
+	src: url('Roman/FiraGO-ExtraLight.eot');
+	src: local('☺'), url('Roman/FiraGO-ExtraLight.woff') format('woff'), url('Roman/FiraGO-ExtraLight.ttf') format('truetype'), url('Roman/FiraGO-ExtraLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Heavy';
+	src: url('Roman/FiraGO-Heavy.eot');
+	src: local('☺'), url('Roman/FiraGO-Heavy.woff') format('woff'), url('Roman/FiraGO-Heavy.ttf') format('truetype'), url('Roman/FiraGO-Heavy.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Light';
+	src: url('Roman/FiraGO-Light.eot');
+	src: local('☺'), url('Roman/FiraGO-Light.woff') format('woff'), url('Roman/FiraGO-Light.ttf') format('truetype'), url('Roman/FiraGO-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Medium';
+	src: url('Roman/FiraGO-Medium.eot');
+	src: local('☺'), url('Roman/FiraGO-Medium.woff') format('woff'), url('Roman/FiraGO-Medium.ttf') format('truetype'), url('Roman/FiraGO-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Regular';
+	src: url('Roman/FiraGO-Regular.eot');
+	src: local('☺'), url('Roman/FiraGO-Regular.woff') format('woff'), url('Roman/FiraGO-Regular.ttf') format('truetype'), url('Roman/FiraGO-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-SemiBold';
+	src: url('Roman/FiraGO-SemiBold.eot');
+	src: local('☺'), url('Roman/FiraGO-SemiBold.woff') format('woff'), url('Roman/FiraGO-SemiBold.ttf') format('truetype'), url('Roman/FiraGO-SemiBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-Thin';
+	src: url('Roman/FiraGO-Thin.eot');
+	src: local('☺'), url('Roman/FiraGO-Thin.woff') format('woff'), url('Roman/FiraGO-Thin.ttf') format('truetype'), url('Roman/FiraGO-Thin.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_FiraGO-UltraLight';
+	src: url('Roman/FiraGO-UltraLight.eot');
+	src: local('☺'), url('Roman/FiraGO-UltraLight.woff') format('woff'), url('Roman/FiraGO-UltraLight.ttf') format('truetype'), url('Roman/FiraGO-UltraLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

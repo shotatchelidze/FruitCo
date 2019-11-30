@@ -1,0 +1,65 @@
+﻿@model List<Fruit.ViewModels.InformationViewModel>
+@{
+    ViewBag.Title = "UpdateForm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Drink Page Information Form</h2>
+
+@using (Html.BeginForm("UpdateInformation", "Drink", FormMethod.Post))
+{
+    for (int i = 0; i < 2; i++)
+    {
+        @Html.HiddenFor(c => Model[i].Id)
+
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    @if (i == 0)
+                    {
+                        <h3 class="card-title">Drink Page_ის ზედა ნაწილი</h3>
+
+                    }
+                    else
+                    {
+                        <h3 class="card-title">Drink Page_ის ქვედა ნაწილი</h3>
+                    }
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: block;">
+                    <div class="form-group">
+                        @Html.LabelFor(c => Model[i].Title)
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Title", i)"
+                                  id="inputDescription" class="form-control" rows="4"
+                                  style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model[i].Title</textarea>
+                        @*@Html.TextBoxFor(c => c.InformationViewModelList[i].Title)*@
+                    </div>
+                </div>
+                <div class="card-body" style="display: block;">
+                    <div class="form-group">
+                        @Html.LabelFor(c => Model[i].Subtitle)
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Subtitle", i)"
+                                  id="inputDescription" class="form-control" rows="4"
+                                  style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model[i].Subtitle</textarea>
+                    </div>
+                </div>
+                <div class="card-body" style="display: block;">
+                    <div class="form-group">
+                        @Html.LabelFor(c => Model[i].Description)
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Description", i)"
+                                  id="inputDescription" class="form-control" rows="4"
+                                  style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model[i].Description</textarea>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">შენახვა</button>
+}

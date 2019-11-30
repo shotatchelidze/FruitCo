@@ -7,11 +7,16 @@ using System.Web;
 
 namespace Fruit.Models
 {
-    public class Container
+    public class Ingredient
     {
         public int Id { get; set; }
 
-        [Column(TypeName = "nvarchar"),MaxLength(50)]
+        [Column(TypeName = "nvarchar"), MaxLength(50)]
         public string Name { get; set; }
+
+        [Column(TypeName = "nvarchar"), MaxLength(50)]
+        public string IngredientTitle { get; set; }
+
+        public Information Information { get; set; }
     }
 }

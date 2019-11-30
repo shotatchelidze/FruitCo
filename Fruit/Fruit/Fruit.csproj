@@ -206,17 +206,30 @@
     <Compile Include="Migrations\201911271026251_ChangeInformationTableTextoToDescription.Designer.cs">
       <DependentUpon>201911271026251_ChangeInformationTableTextoToDescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911281728570_AddOneToManyRelationshipContainerToInformation.cs" />
+    <Compile Include="Migrations\201911281728570_AddOneToManyRelationshipContainerToInformation.Designer.cs">
+      <DependentUpon>201911281728570_AddOneToManyRelationshipContainerToInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911281807330_AddPhotoPathInContainer.cs" />
+    <Compile Include="Migrations\201911281807330_AddPhotoPathInContainer.Designer.cs">
+      <DependentUpon>201911281807330_AddPhotoPathInContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911291436508_ChangeContainerToIngredient.cs" />
+    <Compile Include="Migrations\201911291436508_ChangeContainerToIngredient.Designer.cs">
+      <DependentUpon>201911291436508_ChangeContainerToIngredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Image.cs" />
-    <Compile Include="Models\Container.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Information.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CommonViewModel.cs" />
-    <Compile Include="ViewModels\ContainerViewModel.cs" />
+    <Compile Include="ViewModels\GalleryPhotoViewModel.cs" />
+    <Compile Include="ViewModels\IngredientViewModel.cs" />
     <Compile Include="ViewModels\InformationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -333,6 +346,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Images\GalleryImages\" />
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
@@ -428,6 +442,9 @@
     <Content Include="Areas\Admin\Content\dist\css\alt\adminlte.plugins.min.css.map" />
     <Content Include="Areas\Admin\Content\dist\js\adminlte.js.map" />
     <Content Include="Areas\Admin\Content\dist\js\adminlte.min.js.map" />
+    <Content Include="Areas\Admin\Views\Drink\FormInformation.cshtml" />
+    <Content Include="Areas\Admin\Views\Drink\FormIngredient.cshtml" />
+    <Content Include="Areas\Admin\Views\Drink\GalleryForm.cshtml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -451,6 +468,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911271026251_ChangeInformationTableTextoToDescription.resx">
       <DependentUpon>201911271026251_ChangeInformationTableTextoToDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911281728570_AddOneToManyRelationshipContainerToInformation.resx">
+      <DependentUpon>201911281728570_AddOneToManyRelationshipContainerToInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911281807330_AddPhotoPathInContainer.resx">
+      <DependentUpon>201911281807330_AddPhotoPathInContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911291436508_ChangeContainerToIngredient.resx">
+      <DependentUpon>201911291436508_ChangeContainerToIngredient.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

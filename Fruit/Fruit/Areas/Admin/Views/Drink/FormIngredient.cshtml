@@ -1,0 +1,21 @@
+﻿@model Fruit.ViewModels.IngredientViewModel
+@{
+    /**/
+
+    ViewBag.Title = "FormIngredient";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FormIngredient</h2>
+
+
+@using (Html.BeginForm("AddIngredient", "Drink"))
+{
+    
+    <div class="form-group col-3">
+        <label>@Html.LabelFor(c => c.Name)</label>
+        @Html.TextBoxFor(c => c.Name, new { @class = "form-control" , @placeholder = "დაამატეთ ახალი ინგრედიენტი" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">შენახვა</button>
+}

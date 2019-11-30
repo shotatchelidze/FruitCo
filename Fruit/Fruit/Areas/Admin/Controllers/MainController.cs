@@ -41,6 +41,7 @@ namespace Fruit.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Update(List<InformationViewModel> model)
         {
+            
             foreach (var item in model)
             {
                 var informationInDb = _context.Information.SingleOrDefault(c => c.Id == item.Id);

@@ -10,10 +10,11 @@ namespace Fruit.ViewModels
         public CommonViewModel()
         {
             InformationViewModelList = new List<InformationViewModel>();
-            ContainerViewModelList = new List<ContainerViewModel>();
+            IngredientViewModelList = new List<IngredientViewModel>();
         }
 
         public List<InformationViewModel> InformationViewModelList { get; set; }
-        public List<ContainerViewModel> ContainerViewModelList { get; set; }
+        public List<IngredientViewModel> IngredientViewModelList { get; set; }
+        public List<GalleryPhotoViewModel> GalleryPhotoViewModels { get; set; }
     }
 }

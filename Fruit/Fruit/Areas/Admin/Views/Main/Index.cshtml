@@ -6,7 +6,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Main Page</h2>
 
 
 @*@using (Html.BeginForm("Update", "Main", FormMethod.Post))
@@ -42,7 +42,15 @@
         <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">General</h3>
+                    @if (i == 0)
+                    {
+                        <h3 class="card-title">მარცხენა ნაწილი</h3>
+                    }
+                    else
+                    {
+                        <h3 class="card-title">მარჯვენა ნაწილი</h3>
+                    }
+
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                             <i class="fas fa-minus"></i>
@@ -59,12 +67,6 @@
                     <div class="form-group">
                         @Html.LabelFor(c => c.ElementAtOrDefault(i).Subtitle)
                         <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Subtitle", i)" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Subtitle </textarea>
-                    </div>
-                </div>
-                <div class="card-body" style="display: block;">
-                    <div class="form-group">
-                        @Html.LabelFor(c => c.ElementAtOrDefault(i).Description)
-                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Description", i)" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Description</textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->

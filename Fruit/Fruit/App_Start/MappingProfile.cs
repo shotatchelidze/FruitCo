@@ -12,16 +12,16 @@ namespace Fruit.App_Start
     {
         public MappingProfile()
         {
-            Mapper.CreateMap<Information, InformationViewModel>();
+            Mapper.CreateMap<MainPage, MainPageViewModel>();
             Mapper.CreateMap<Ingredient, IngredientViewModel>();
-            Mapper.CreateMap<Image, GalleryPhotoViewModel>();
+            Mapper.CreateMap<Image, ImageViewModel>();
 
 
-            Mapper.CreateMap<InformationViewModel, Information>()
+            Mapper.CreateMap<MainPageViewModel, MainPage>()
                 .ForMember(m => m.Id, opt => opt.Ignore());
             Mapper.CreateMap<IngredientViewModel, Ingredient>()
                 .ForMember(m => m.Id, opt => opt.Ignore());
-            Mapper.CreateMap<GalleryPhotoViewModel, Image>()
+            Mapper.CreateMap<ImageViewModel, Image>()
                 .ForMember(m => m.Id, opt => opt.Ignore());
             
         }

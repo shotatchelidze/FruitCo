@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Fruit.ViewModels;
+using System.IO;
 
 namespace Fruit.Areas.Admin.Controllers
 {
@@ -29,9 +30,9 @@ namespace Fruit.Areas.Admin.Controllers
         // GET: Admin/Main
         public ActionResult Index()
         {
-            var informationInDb = _context.Information.ToList().Take(2);
+            var informationInDb = _context.MainPage.ToList().Take(2);
 
-            var informationListViewModel = new List<InformationViewModel>();
+            var informationListViewModel = new List<MainPageViewModel>();
 
             Mapper.Map(informationInDb, informationListViewModel);
 
@@ -39,12 +40,12 @@ namespace Fruit.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(List<InformationViewModel> model)
+        public ActionResult Update(List<MainPageViewModel> model)
         {
             
             foreach (var item in model)
             {
-                var informationInDb = _context.Information.SingleOrDefault(c => c.Id == item.Id);
+                var informationInDb = _context.MainPage.SingleOrDefault(c => c.Id == item.Id);
                 //informationInDb.Title = item.Title;
                 //informationInDb.Subtitle = item.Subtitle;
                 //informationInDb.Description = item.Description;
@@ -55,6 +56,39 @@ namespace Fruit.Areas.Admin.Controllers
 
             return RedirectToAction("Index", "Main");
             
+        }
+
+        // GET: Admin/Main
+        public ActionResult BackgroundImageForm()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult BackgroundImageForm(ImageViewModel model)
+        {
+            if (model != null)
+            {
+                var physicalPath = Path.Combine(Server.MapPath("~/Images/BackgroundImages"), Path.GetFileName(model.ImageUpload.FileName));
+
+                model.ImageUpload.SaveAs(physicalPath);
+                
+                var serverPath = "/Images/BackgroundImages/" + model.ImageUpload.FileName;
+                var sortIndex = model.SortIndex;
+
+                var imageViewModel = new ImageViewModel()
+                {
+                    ImagePath = serverPath,
+                    SortIndex = sortIndex
+                };
+                    
+                
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index","Main");
         }
     }
 }

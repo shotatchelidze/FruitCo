@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Fruit.Models
+namespace Fruit.ViewModels
 {
-    public class Image
+    public class ImageViewModel
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        
+
         public string PageName { get; set; }
 
         public string ImagePath { get; set; }
 
         public int SortIndex { get; set; }
 
-
-
-        public virtual MainPage MainPage { get; set; }
+        [DataType(DataType.Upload)]
+        public HttpPostedFileBase ImageUpload { get; set; }
     }
 }

@@ -17,6 +17,6 @@ namespace Fruit.Models
         [Column(TypeName = "nvarchar"), MaxLength(50)]
         public string IngredientTitle { get; set; }
 
-        public Information Information { get; set; }
+        //public MainPage Information { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Fruit.Models
 {
-    public class Information
+    public class MainPage
     {
         public int Id { get; set; }
 
@@ -17,7 +17,8 @@ namespace Fruit.Models
         [Column(TypeName = "nvarchar"),MaxLength(1000)]
         public string Subtitle { get; set; }
 
-        [Column(TypeName = "nvarchar")]
-        public string Description { get; set; }
+
+
+        public virtual List<Image> Images { get; set; }
     }
 }

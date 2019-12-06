@@ -1,4 +1,4 @@
-﻿@model List<Fruit.ViewModels.InformationViewModel>
+﻿@model List<Fruit.ViewModels.MainPageViewModel>
 @{
     /**/
 
@@ -7,31 +7,6 @@
 }
 
 <h2>Main Page</h2>
-
-
-@*@using (Html.BeginForm("Update", "Main", FormMethod.Post))
-    {
-        for (int i = 0; i < 2; i++)
-        {
-            @Html.HiddenFor(c => Model[i].Id)
-
-            <div class="form-group">
-                @Html.LabelFor(c => Model[i].Title)
-                @Html.TextAreaFor(c => Model[i].Title, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(c => Model[i].Subtitle)
-                @Html.TextAreaFor(c => Model[i].Subtitle, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(c => Model[i].Description)
-                @Html.TextAreaFor(c => Model[i].Description, new { @class = "form-control", @cols = "100", @rows = "5", @style = "width:30%;" })
-
-            </div>
-        }
-        <button type="submit" class="btn btn-primary">შენახვა</button>
-    }*@
 
 @using (Html.BeginForm("Update", "Main", FormMethod.Post))
 {
@@ -60,13 +35,17 @@
                 <div class="card-body" style="display: block;">
                     <div class="form-group">
                         @Html.LabelFor(c => c.ElementAtOrDefault(i).Title)
-                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Title", i)" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Title</textarea>
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Title", i)"
+                                  id="inputDescription" class="form-control" rows="4"
+                                  style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Title</textarea>
                     </div>
                 </div>
                 <div class="card-body" style="display: block;">
                     <div class="form-group">
                         @Html.LabelFor(c => c.ElementAtOrDefault(i).Subtitle)
-                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Subtitle", i)" id="inputDescription" class="form-control" rows="4" style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Subtitle </textarea>
+                        <textarea placeholder="შესავსები ველი" name="@String.Format("[{0}].Subtitle", i)"
+                                  id="inputDescription" class="form-control" rows="4"
+                                  style="margin-top: 0px; margin-bottom: 0px; height: 124px;">@Model.ElementAtOrDefault(i).Subtitle </textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->
@@ -78,3 +57,22 @@
     <button type="submit" class="btn btn-primary">შენახვა</button>
 }
 
+<div class="col-12">
+    <div class="card card-primary">
+        <div class="card-header">
+            <div class="card-title">
+                Ekko Lightbox
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href="~/Images/BackgroundImages/" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
+                        <img src="~/Images/BackgroundImages/" class="img-fluid mb-2" alt="white sample">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.ActionLink("Add", "BackgroundImageForm", "Main", null, new { @class = "btn btn-primary btn-large" })
+</div>    

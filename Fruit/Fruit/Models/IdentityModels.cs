@@ -22,7 +22,7 @@ namespace Fruit.Models
     {
         public DbSet<Image> ImagePath { get; set; }
         public DbSet<Ingredient> Ingredient { get; set; }
-        public DbSet<Information> Information { get; set; }
+        public DbSet<MainPage> MainPage{ get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

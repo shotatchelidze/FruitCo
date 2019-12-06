@@ -28,13 +28,13 @@ namespace Fruit.Areas.Admin.Controllers
         // GET: Admin/Drink
         public ActionResult Index()
         {
-            var informationInDb = _context.Information.ToList().Skip(2).Take(2);
+            var informationInDb = _context.MainPage.ToList().Skip(2).Take(2);
             var IngredientInDb = _context.Ingredient.ToList();
             var imagePathInDb = _context.ImagePath.ToList();
 
-            var informationListViewModel = new List<InformationViewModel>();
+            var informationListViewModel = new List<MainPageViewModel>();
             var IngredientListVIewModel = new List<IngredientViewModel>();
-            var imagePathViewModel = new List<GalleryPhotoViewModel>();
+            var imagePathViewModel = new List<ImageViewModel>();
 
             Mapper.Map(informationInDb, informationListViewModel);
             Mapper.Map(IngredientInDb, IngredientListVIewModel);
@@ -53,9 +53,9 @@ namespace Fruit.Areas.Admin.Controllers
         // GET: Admin/Drink/UpdateForm
         public ActionResult FormInformation()
         {
-            var informationInDb = _context.Information.ToList().Skip(2).Take(2);
+            var informationInDb = _context.MainPage.ToList().Skip(2).Take(2);
             
-            var informationListViewModel = new List<InformationViewModel>();
+            var informationListViewModel = new List<MainPageViewModel>();
             
             Mapper.Map(informationInDb, informationListViewModel);
             
@@ -63,11 +63,11 @@ namespace Fruit.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult UpdateInformation(List<InformationViewModel> informationViewModels)
+        public ActionResult UpdateInformation(List<MainPageViewModel> informationViewModels)
         {
             foreach (var informationViewModelsItem in informationViewModels)
             {
-                var informationInDb = _context.Information.SingleOrDefault(c => c.Id == informationViewModelsItem.Id);
+                var informationInDb = _context.MainPage.SingleOrDefault(c => c.Id == informationViewModelsItem.Id);
 
                 Mapper.Map(informationViewModelsItem, informationInDb);
             }
@@ -120,23 +120,22 @@ namespace Fruit.Areas.Admin.Controllers
 
         public ActionResult GalleryForm()
         {
-            return View();
+            return View(new ImageViewModel());
             
         }
 
         [HttpPost]
-        public ActionResult GalleryForm(IEnumerable<HttpPostedFileBase> images)
+        public ActionResult GalleryForm(ImageViewModel images)
         {
-            foreach (var item in images)
+            
+            if (images.ImageUpload != null)
             {
-                var physicalPath = Path.Combine(Server.MapPath("~/Images/GalleryImages"), Path.GetFileName(item.FileName));
+                var physicalPath = Path.Combine(Server.MapPath("~/Images/GalleryImages"), Path.GetFileName(images.ImageUpload.FileName));
 
-                item.SaveAs(physicalPath);
+                images.ImageUpload.SaveAs(physicalPath);
 
-                var serverPath = "/Content/Images/" + item.FileName;
-
-
-
+                var serverPath = "/Images/GalleryImages/" + images.ImageUpload.FileName;
+                
             }
 
             //Images images = new Images();

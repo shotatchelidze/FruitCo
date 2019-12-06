@@ -1,0 +1,559 @@
+$color-white: #ffffff;
+$color-black: #111111;
+$color-primary: #39b549;
+$color-primary-hover: #076312;
+$color-secondary: #221f1f;
+$color-third: #fff8e7;
+$color-fourth: #e8fcff;
+$color-button-one: #d9df20;
+$color-button-two: #fafe8a;
+
+* {
+  padding: 0;
+  margin: 0;
+  display: block;
+  title {
+    display: none;
+  }
+  body {
+    overflow-x: hidden;
+    header {
+      z-index: 10;
+      .header-logo {
+        z-index: 11;
+        width: 106px;
+        height: auto;
+        position: absolute;
+        top: 1vh;
+        left: 1vw;
+        &:hover {
+          top: 1.4vh;
+          transition: all 0.2s;
+        }
+        &:active {
+          top: 1.2vh;
+          transition: all 0.2s;
+        }
+      }
+      //menu
+      .header-menu {
+        overflow-x: hidden;
+        //button that turns on the menu screen
+        .menu-button {
+          z-index: 6;
+          position: fixed;
+          top: 46px;
+          right: 50px;
+          width: 50px;
+          height: 25px;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          &:hover {
+            top: 44px;
+            transition: all 0.2s;
+            cursor: pointer;
+          }
+          &:active {
+            top: 45px;
+            transform: scale(1.2);
+            transition: all 0.2s;
+          }
+        }
+        .menu {
+          display: none;
+          position: fixed;
+          z-index: 15;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          .menu-content {
+            background-image: linear-gradient($color-third, $color-fourth);
+            width: 100%;
+            height: 100%;
+            .site-buttons {
+              position: absolute;
+              top: 13vw;
+              left: 50%;
+              transform: translateX(-50%);
+              animation-name: menuSiteButtons;
+              animation-duration: 0.7s;
+              li {
+                .site-button {
+                  display: inline-block;
+                  position: relative;
+                  left: 50%;
+                  line-height: 56px;
+                  text-align: center;
+                  padding: 18px 176px;
+                  outline: none;
+                  border: none;
+                  text-decoration: none;
+                  transform: translateX(-50%);
+                  border-radius: 50px;
+                  letter-spacing: 2px;
+                  font-size: 36px;
+                  font-family: "Conv_FiraGO-Bold";
+                  color: $color-primary;
+                  background-color: transparent;
+                  transform-style: preserve-3d;
+                  &::selection {
+                    background: $color-button-one;
+                  }
+                  &::-moz-selection {
+                    background: $color-button-one;
+                  }
+                  &:hover {
+                    transform: translate(-50%, -3px);
+                    background-color: $color-primary;
+                    color: $color-secondary;
+                    transition: all 0.1s;
+                  }
+                  &:hover::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $color-button-one;
+                    height: 100%;
+                    width: 100%;
+                    top: 6px;
+                    left: 6px;
+                    z-index: -1;
+                    border-radius: 50px;
+                    transform: translateZ(-1px);
+                  }
+                  &:active::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $color-button-two;
+                    height: 100%;
+                    width: 100%;
+                    top: 12px;
+                    left: 12px;
+                    z-index: -2;
+                    border-radius: 50px;
+                    transform: translateZ(-2px);
+                  }
+                  &:active {
+                    transform: translate(-50%, -1px);
+                    transition: all 0.1s;
+                  }
+                }
+              }
+            }
+            .language-buttons {
+              display: table;
+              position: absolute;
+              bottom: 12vw;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              animation-name: menuLanguageButtons;
+              animation-duration: 0.7s;
+              li {
+                float: left;
+              }
+              button {
+                width: 79px;
+                height: 79px;
+              }
+              .language-button {
+                margin: 0 20px;
+                border-radius: 50%;
+                display: inline;
+                text-align: center;
+                outline: none;
+                border: none;
+                text-decoration: none;
+                font-size: 24px;
+                letter-spacing: 2px;
+                font-family: "Conv_FiraGO-SemiBold";
+                color: $color-secondary;
+                background-color: transparent;
+                transform-style: preserve-3d;
+                &::selection {
+                  background: $color-button-one;
+                }
+                &::-moz-selection {
+                  background: $color-button-one;
+                }
+                &:hover {
+                  transform: translateY(-3px);
+                  background-color: $color-primary;
+                  transition: all 0.1s;
+                }
+                &:hover::after {
+                  content: "";
+                  position: absolute;
+                  background-color: $color-button-one;
+                  height: 100%;
+                  width: 100%;
+                  top: 6px;
+                  left: 6px;
+                  z-index: -1;
+                  border-radius: 50%;
+                  transform: translateZ(-1px);
+                }
+                &:active::after {
+                  content: "";
+                  position: absolute;
+                  background-color: $color-button-two;
+                  height: 100%;
+                  width: 100%;
+                  top: 12px;
+                  left: 12px;
+                  z-index: -2;
+                  border-radius: 50%;
+                  transform: translateZ(-2px);
+                }
+                &:active {
+                  transform: translateY(-1px);
+                  transition: all 0.1s;
+                }
+              }
+            }
+            .media-buttons {
+              display: table;
+              position: absolute;
+              bottom: 2vw;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              animation-name: menuMediaButtons;
+              animation-duration: 0.7s;
+              li {
+                float: left;
+                margin: 0 10px;
+              }
+              .youtube {
+                width: 41px;
+                height: auto;
+                margin: -5px 0;
+                &::selection {
+                  background: none;
+                }
+                &::-moz-selection {
+                  background: none;
+                }
+              }
+              .facebook {
+                width: 28px;
+                height: auto;
+                &::selection {
+                  background: none;
+                }
+                &::-moz-selection {
+                  background: none;
+                }
+              }
+              .instagram {
+                width: 29px;
+                height: auto;
+                &::selection {
+                  background: none;
+                }
+                &::-moz-selection {
+                  background: none;
+                }
+              }
+            }
+            .menu-image {
+              &::selection {
+                background: none;
+              }
+              &::-moz-selection {
+                background: none;
+              }
+            }
+            .menu-image-one {
+              position: relative;
+              left: 49%;
+              top: -19%;
+              width: 440px;
+              height: auto;
+              -ms-transform: rotate(-25deg);
+              -webkit-transform: rotate(-25deg);
+              transform: rotate(-25deg);
+              animation-name: menuImageOne;
+              animation-duration: 0.7s;
+            }
+            .menu-image-two {
+              position: relative;
+              left: 84.7%;
+              top: 3%;
+              width: 600px;
+              height: auto;
+              -ms-transform: rotate(200deg);
+              -webkit-transform: rotate(200deg);
+              transform: rotate(200deg);
+              animation-name: menuImageTwo;
+              animation-duration: 0.7s;
+            }
+            .menu-image-three {
+              position: relative;
+              left: -19%;
+              top: -14%;
+              width: 700px;
+              height: auto;
+              -ms-transform: rotate(-30deg);
+              -webkit-transform: rotate(-30deg);
+              transform: rotate(-30deg);
+              animation-name: menuImageThree;
+              animation-duration: 0.7s;
+            }
+            .menu-image-four {
+              position: relative;
+              left: 79%;
+              top: -42%;
+              width: 300px;
+              height: auto;
+              -ms-transform: rotate(35deg);
+              -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+              animation-name: menuImageFour;
+              animation-duration: 0.7s;
+            }
+            .menu-image-five {
+              position: relative;
+              left: -4%;
+              top: -167%;
+              width: 650px;
+              height: auto;
+              -ms-transform: rotate(-50deg) scaleX(-1);
+              -webkit-transform: rotate(-50deg) scaleX(-1);
+              transform: rotate(-50deg) scaleX(-1);
+              animation-name: menuImageFive;
+              animation-duration: 0.7s;
+            }
+            .close {
+              color: $color-primary;
+              position: absolute;
+              right: 55px;
+              font-size: 150px;
+              font-weight: bold;
+              &:hover {
+                color: $color-secondary;
+                text-decoration: none;
+                cursor: pointer;
+                top: -5px;
+                transition: all 0.2s;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section:nth-child(odd) {
+      background-image: linear-gradient($color-fourth, $color-third);
+      height: 1080px;
+    }
+
+    section:nth-child(even) {
+      background-image: linear-gradient($color-third, $color-fourth);
+      height: 1080px;
+    }
+
+    .section-one {
+      .section-one-textboxes {
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: $color-primary;
+          border-radius: 20px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: $color-primary-hover;
+        }
+        .section-one-textbox-one {
+          z-index: 4;
+          overflow: hidden;
+          overflow-y: auto;
+          position: absolute;
+          margin-top: 11vh;
+          margin-left: 7vw;
+          width: 824px;
+          height: 719px;
+          background: $color-secondary;
+          .section-one-textbox-one-banner {
+            width: 343px;
+            height: auto;
+            margin-top: 56px;
+            margin-left: 116px;
+          }
+          h1 {
+            font-family: "Conv_FiraGO-SemiBold";
+            color: $color-white;
+            font-size: 20px;
+            letter-spacing: 1px;
+            position: absolute;
+            margin-left: 116px;
+            margin-top: 10px;
+          }
+          p {
+            font-family: "Conv_FiraGO-Book";
+            color: $color-white;
+            font-size: 18px;
+            margin-top: 90px;
+            margin-left: 116px;
+            width: 550px;
+          }
+          .section-one-textbox-one-fruit {
+            position: relative;
+            width: auto;
+            height: 350px;
+            top: -132%;
+            left: 44%;
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+          }
+        }
+        .section-one-textbox-two {
+          z-index: 3;
+          overflow: hidden;
+          overflow-y: auto;
+          position: absolute;
+          margin-top: 11vh;
+          margin-left: 7vw;
+          width: 824px;
+          height: 719px;
+          background: $color-button-one;
+          .section-one-textbox-two-banner {
+            width: 343px;
+            height: auto;
+            margin-top: 56px;
+            margin-left: 116px;
+          }
+          h1 {
+            font-family: "Conv_FiraGO-SemiBold";
+            color: $color-white;
+            font-size: 20px;
+            letter-spacing: 1px;
+            position: absolute;
+            margin-left: 116px;
+            margin-top: 10px;
+          }
+          p {
+            font-family: "Conv_FiraGO-Book";
+            color: $color-white;
+            font-size: 18px;
+            margin-top: 90px;
+            margin-left: 116px;
+            width: 550px;
+          }
+          .section-one-textbox-two-fruit {
+            position: relative;
+            width: auto;
+            height: 350px;
+            top: -133%;
+            left: 55%;
+            -ms-transform: rotate(230deg);
+            -webkit-transform: rotate(230deg);
+            transform: rotate(230deg);
+          }
+        }
+      }
+      .section-one-buttons {
+        z-index: 10;
+        position: absolute;
+        margin-top: 186px;
+        margin-left: 1005px;
+        .section-one-buttons-button {
+          text-align: center;
+          width: 270px;
+          height: 55px;
+          outline: none;
+          border: none;
+          text-decoration: none;
+          border-radius: 50px;
+          font-size: 16px;
+          letter-spacing: 1px;
+          font-family: "Conv_FiraGO-Bold";
+          transform-style: preserve-3d;
+          background-color: $color-primary;
+        }
+        .button-one {
+        }
+        .button-two {
+          margin-top: 20px;
+        }
+        .icon-one {
+          width: 45px;
+          height: auto;
+        }
+        .icon-two {
+          margin-top: 29px;
+          width: 45px;
+          height: auto;
+        }
+      }
+      .section-one-image-one {
+        position: relative;
+        width: auto;
+        height: 350px;
+        top: -12%;
+        left: 30%;
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .section-one-image-two {
+        position: relative;
+        width: auto;
+        height: 390px;
+        top: 22.5%;
+        left: -5.5%;
+        -ms-transform: rotate(23deg);
+        -webkit-transform: rotate(23deg);
+        transform: rotate(23deg);
+      }
+      .section-one-image-three {
+        position: relative;
+        width: auto;
+        height: 350px;
+        top: -40%;
+        left: 55%;
+        -ms-transform: rotate(230deg);
+        -webkit-transform: rotate(230deg);
+        transform: rotate(230deg);
+      }
+      .section-one-image-four {
+        position: relative;
+        width: auto;
+        height: 350px;
+        top: -60%;
+        left: 55%;
+        -ms-transform: rotate(230deg);
+        -webkit-transform: rotate(230deg);
+        transform: rotate(230deg);
+      }
+      .section-one-image-five {
+        position: relative;
+        width: auto;
+        height: 800px;
+        top: -61%;
+        left: 55%;
+      }
+    }
+
+    .section-two {
+    }
+
+    footer {
+    }
+  }
+}
+
+@media only screen and (max-width: 1680px) {
+}
+@media only screen and (max-width: 1440px) {
+}
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 768px) {
+}

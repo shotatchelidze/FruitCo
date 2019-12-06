@@ -10,51 +10,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="~/src/img/smuzi.png" type="image/x-icon">
     <title>fruitco</title>
-    <link rel="stylesheet" href="../../src/css/styles.css">
-    <link rel="stylesheet" href="../../src/fonts/fonts.css">
+    <link rel="stylesheet" href="~/src/css/index.css">
+    <link rel="stylesheet" href="~/src/fonts/fonts.css">
 </head>
 
 <body>
 
     <header class="header">
+
         <a href="#">
             <span class="header-background">
-                <img src="../../src/img/logo.svg" alt="logo" class="header-logo">
+                <img src="~/src/img/logo.svg" alt="logo" class="header-logo">
             </span>
         </a>
 
         <div class="header-menu">
-            <!-- გასაკეთებელია მომავალში -->
+            <button id="menu-button" class="menu-button">
+                <img src="~/src/img/menu.svg"
+                     alt="menu">
+            </button>
+            <div id="menu" class="menu">
+                <div class="menu-content">
+                    <span class="close">&times;</span>
+
+                    <img src="~/src/img/kiwi.svg" alt="fruit"
+                         class="menu-image menu-image-one">
+                    <img src="~/src/img/kiwi.svg" alt="fruit"
+                         class="menu-image menu-image-two">
+                    <img src="~/src/img/kiwi.svg" alt="fruit"
+                         class="menu-image menu-image-three">
+                    <img src="~/src/img/kargamoni.svg" alt="fruit"
+                         class="menu-image menu-image-four">
+                    <img src="~/src/img/vashli.svg" alt="fruit"
+                         class="menu-image menu-image-five">
+
+                    <div class="button-holder">
+                        <ul class="site-buttons">
+                            <li>
+                                <a href="~/src/dasalevi.html" class="site-button">სასმელი</a>
+                            </li>
+                            <li>
+                                <a href="~/src/xili.html"
+                                   class="site-button">ხილ-ბოსტნეული</a>
+                            </li>
+                            <li>
+                                <a href="~/src/about.html" class="site-button">
+                                    ჩვენ
+                                    შესახებ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/src/contact.html" class="site-button">კონტაქტი</a>
+                            </li>
+                        </ul>
+
+                        <ul class="language-buttons">
+                            <li><button class="language-button">ქარ</button></li>
+                            <li><button class="language-button">EN</button></li>
+                            <li><button class="language-button">RU</button></li>
+                        </ul>
+
+                        <ul class="media-buttons">
+                            <li>
+                                <a href="#" class="media-button">
+                                    <img src="~/src/img/youtube.svg" alt="youtube"
+                                         class="youtube">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="media-button">
+                                    <img src="~/src/img/facebook.svg" alt="facebook"
+                                         class="facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="media-button">
+                                    <img src="~/src/img/instagram.svg" alt="instagram"
+                                         class="instagram">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script src="~/src/scripts/menu.js"></script>
         </div>
+
     </header>
 
-    <img src="../../src/img/kiwi.png" alt="fruit middle" class="middle-image">
+    <img src="~/src/img/kiwi.png" alt="fruit middle" class="middle-image">
 
     <div class="split left">
         <div class="centered">
             <h1>დასალევი</h1>
             <p>ხილი და ბოსტნეული</p>
-            <a href="#" class="button-left">გაიგე მეტი</a>
+            <a href="/dasalevi/index" class="button button-left">გაიგე მეტი</a>
         </div>
 
-        <img src="../../src/img/kiwi.svg" alt="fruit left two" class="left-one">
-        <img src="../../src/img/kargamoni.svg" alt="fruit left three" class="left-two">
-        <img src="../../src/img/kargamoni.svg" alt="fruit left four" class="left-three">
-        <img src="../../src/img/vashli.svg" alt="fruit left five" class="left-four">
-        <img src="../../src/img/kiwi.svg" alt="fruit left six" class="left-five">
+        <img src="~/src/img/kiwi.svg" alt="fruit left one" class="fruit left-one">
+        <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
+        <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
+        <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
+        <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
     </div>
 
     <div class="split right">
         <div class="centered">
             <h1>ცოცხალი</h1>
             <p>ხილი და ბოსტნეული</p>
-            <a href="#" class="button-right">გაიგე მეტი</a>
+            <a href="~/src/xili.html" class="button button-right">გაიგე მეტი</a>
         </div>
 
-        <img src="../../src/img/kargamoni.png" alt="fruit right one" class="right-one">
-        <img src="../../src/img/main.png" alt="fruit right three" class="right-two">
-        <img src="../../src/img/vashli.png" alt="fruit right four" class="right-three">
+        <img src="~/src/img/kargamoni.png" alt="fruit right one" class="fruit right-one">
+        <img src="~/src/img/main.png" alt="fruit right two" class="fruit right-two">
+        <img src="~/src/img/vashli.png" alt="fruit right three" class="fruit right-three">
     </div>
 
 </body>

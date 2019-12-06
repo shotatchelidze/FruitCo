@@ -177,6 +177,7 @@
     <Compile Include="Areas\Admin\Controllers\DrinkController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DasaleviController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -308,17 +309,39 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <Content Include="src\css\dasalevi.css" />
+    <Content Include="src\css\index.css" />
     <Content Include="src\css\styles.css" />
     <Content Include="src\fonts\fonts.css" />
+    <Content Include="src\img\1.png" />
+    <Content Include="src\img\2.png" />
+    <Content Include="src\img\3.png" />
+    <Content Include="src\img\4.png" />
+    <Content Include="src\img\5.png" />
+    <Content Include="src\img\6.png" />
+    <Content Include="src\img\7.png" />
+    <Content Include="src\img\8.png" />
+    <Content Include="src\img\asortimenti.svg" />
+    <Content Include="src\img\dasalevi 1.png" />
+    <Content Include="src\img\dasalevi.png" />
+    <Content Include="src\img\facebook.svg" />
+    <Content Include="src\img\ingredientebi.svg" />
+    <Content Include="src\img\instagram.svg" />
     <Content Include="src\img\kargamoni.png" />
     <Content Include="src\img\kargamoni.svg" />
+    <Content Include="src\img\ketili.png" />
     <Content Include="src\img\kiwi.png" />
     <Content Include="src\img\kiwi.svg" />
     <Content Include="src\img\logo.svg" />
     <Content Include="src\img\main.png" />
     <Content Include="src\img\menu.svg" />
+    <Content Include="src\img\play-button.svg" />
+    <Content Include="src\img\smuzi.png" />
+    <Content Include="src\img\teqnologiebi.svg" />
     <Content Include="src\img\vashli.png" />
     <Content Include="src\img\vashli.svg" />
+    <Content Include="src\img\youtube.svg" />
+    <Content Include="src\scripts\menu.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -358,7 +381,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Images\GalleryImages\" />
-    <Folder Include="src\scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Drink\Index.cshtml" />
@@ -548,6 +570,9 @@
     <Content Include="src\fonts\Roman\FiraGO-UltraLight.woff" />
     <Content Include="src\fonts\Roman\FiraGO-UltraLight.woff2" />
     <Content Include="src\sass\styles.scss" />
+    <Content Include="src\sass\dasalevi.scss" />
+    <Content Include="src\sass\index.scss" />
+    <Content Include="Views\Dasalevi\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

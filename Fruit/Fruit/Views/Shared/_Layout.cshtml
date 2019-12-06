@@ -1,44 +1,98 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/src/css/dasalevi.css">
+    <link rel="stylesheet" href="~/src/fonts/fonts.css">
+    <title>fruitco დასალევი</title>
+    <link rel="icon" href="~/src/img/smuzi.png" type="image/x-icon">
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+    <header class="header">
+
+        <a href="~/src/index.html">
+            <img src="~/src/img/logo.svg" alt="logo" class="header-logo">
+        </a>
+
+        <div class="header-menu">
+            <button id="menu-button" class="menu-button">
+                <img src="~/src/img/menu.svg"
+                     alt="menu">
+            </button>
+            <div id="menu" class="menu">
+                <div class="menu-content">
+                    <span class="close">&times;</span>
+
+                    <img src="~/src/img/kiwi.svg" alt="fruit"
+                         class="menu-image menu-image-one">
+                    <img src="~/src/img/kiwi.svg" alt="fruit"
+                         class="menu-image menu-image-two">
+                    <img src="~/src/img/kiwi.svg" alt="fruit"
+                         class="menu-image menu-image-three">
+                    <img src="~/src/img/kargamoni.svg" alt="fruit"
+                         class="menu-image menu-image-four">
+                    <img src="~/src/img/vashli.svg" alt="fruit"
+                         class="menu-image menu-image-five">
+
+                    <div class="button-holder">
+                        <ul class="site-buttons">
+                            <li>
+                                <a href="~/src/index.html" class="site-button">
+                                    მთავარი
+                                    გვერდი
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/src/xili.html"
+                                   class="site-button">ხილ-ბოსტნეული</a>
+                            </li>
+                            <li>
+                                <a href="~/src/about.html" class="site-button">
+                                    ჩვენ
+                                    შესახებ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/src/contact.html" class="site-button">კონტაქტი</a>
+                            </li>
+                        </ul>
+
+                        <ul class="language-buttons">
+                            <li><button class="language-button">ქარ</button></li>
+                            <li><button class="language-button">EN</button></li>
+                            <li><button class="language-button">RU</button></li>
+                        </ul>
+
+                        <ul class="media-buttons">
+                            <li>
+                                <a href="#" class="media-button">
+                                    <img src="~/src/img/youtube.svg" alt="youtube"
+                                         class="youtube">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="media-button">
+                                    <img src="~/src/img/facebook.svg" alt="facebook"
+                                         class="facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="media-button">
+                                    <img src="~/src/img/instagram.svg" alt="instagram"
+                                         class="instagram">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    </header>
+    @RenderBody()
 </body>
 </html>

@@ -314,9 +314,12 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <Content Include="src\css\about.css" />
+    <Content Include="src\css\contact.css" />
     <Content Include="src\css\dasalevi.css" />
     <Content Include="src\css\index.css" />
     <Content Include="src\css\styles.css" />
+    <Content Include="src\css\xili.css" />
     <Content Include="src\fonts\fonts.css" />
     <Content Include="src\img\1.png" />
     <Content Include="src\img\2.png" />
@@ -326,12 +329,16 @@
     <Content Include="src\img\6.png" />
     <Content Include="src\img\7.png" />
     <Content Include="src\img\8.png" />
+    <Content Include="src\img\arrow.svg" />
     <Content Include="src\img\asortimenti.svg" />
+    <Content Include="src\img\atami.png" />
+    <Content Include="src\img\atmis xe.png" />
     <Content Include="src\img\dasalevi 1.png" />
     <Content Include="src\img\dasalevi.png" />
     <Content Include="src\img\facebook.svg" />
     <Content Include="src\img\ingredientebi.svg" />
     <Content Include="src\img\instagram.svg" />
+    <Content Include="src\img\karalioki.png" />
     <Content Include="src\img\kargamoni.png" />
     <Content Include="src\img\kargamoni.svg" />
     <Content Include="src\img\ketili.png" />
@@ -339,13 +346,20 @@
     <Content Include="src\img\kiwi.svg" />
     <Content Include="src\img\logo.svg" />
     <Content Include="src\img\main.png" />
+    <Content Include="src\img\mandarini.png" />
     <Content Include="src\img\menu.svg" />
+    <Content Include="src\img\msxali.png" />
+    <Content Include="src\img\neqtarini.png" />
     <Content Include="src\img\play-button.svg" />
+    <Content Include="src\img\qliavi.png" />
+    <Content Include="src\img\search.svg" />
     <Content Include="src\img\smuzi.png" />
     <Content Include="src\img\teqnologiebi.svg" />
     <Content Include="src\img\vashli.png" />
     <Content Include="src\img\vashli.svg" />
+    <Content Include="src\img\xurma.png" />
     <Content Include="src\img\youtube.svg" />
+    <Content Include="src\scripts\drinkPageButtons.js" />
     <Content Include="src\scripts\menu.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -580,6 +594,9 @@
     <Content Include="src\sass\dasalevi.scss" />
     <Content Include="src\sass\index.scss" />
     <Content Include="Views\Dasalevi\Index.cshtml" />
+    <Content Include="src\sass\about.scss" />
+    <Content Include="src\sass\contact.scss" />
+    <Content Include="src\sass\xili.scss" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

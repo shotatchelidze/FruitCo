@@ -13,7 +13,6 @@
 
 <body>
     <header class="header">
-
         <a href="~/src/index.html">
             <img src="~/src/img/logo.svg" alt="logo" class="header-logo">
         </a>
@@ -41,23 +40,30 @@
                     <div class="button-holder">
                         <ul class="site-buttons">
                             <li>
-                                <a href="~/src/index.html" class="site-button">
+                                <a href="~/src/index.html" class="site-button"
+                                   id="main">
                                     მთავარი
                                     გვერდი
                                 </a>
                             </li>
                             <li>
-                                <a href="~/src/xili.html"
-                                   class="site-button">ხილ-ბოსტნეული</a>
+                                <a href="~/src/dasalevi.html" class="site-button"
+                                   id="drink">სასმელი</a>
                             </li>
                             <li>
-                                <a href="~/src/about.html" class="site-button">
+                                <a href="~/src/xili.html" class="site-button"
+                                   id="fruit">ხილ-ბოსტნეული</a>
+                            </li>
+                            <li>
+                                <a href="~/src/about.html" class="site-button"
+                                   id="about-us">
                                     ჩვენ
                                     შესახებ
                                 </a>
                             </li>
                             <li>
-                                <a href="~/src/contact.html" class="site-button">კონტაქტი</a>
+                                <a href="~/src/contact.html" class="site-button"
+                                   id="contact">კონტაქტი</a>
                             </li>
                         </ul>
 
@@ -91,7 +97,6 @@
                 </div>
             </div>
         </div>
-
     </header>
     @RenderBody()
 </body>

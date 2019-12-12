@@ -12,7 +12,8 @@ $color-button-two: #fafe8a;
   padding: 0;
   margin: 0;
   display: block;
-  title {
+  title,
+  script {
     display: none;
   }
   body {
@@ -342,17 +343,14 @@ $color-button-two: #fafe8a;
         }
       }
     }
-
     section:nth-child(odd) {
       background-image: linear-gradient($color-fourth, $color-third);
       height: 1080px;
     }
-
     section:nth-child(even) {
       background-image: linear-gradient($color-third, $color-fourth);
       height: 1080px;
     }
-
     .section-one {
       .section-one-textboxes {
         ::-webkit-scrollbar {
@@ -422,7 +420,7 @@ $color-button-two: #fafe8a;
           margin-left: 7vw;
           width: 824px;
           height: 719px;
-          background: $color-button-one;
+          background: $color-secondary;
           .section-one-textbox-two-banner {
             width: 343px;
             height: auto;
@@ -459,7 +457,7 @@ $color-button-two: #fafe8a;
         }
       }
       .section-one-buttons {
-        z-index: 10;
+        z-index: 2;
         position: absolute;
         margin-top: 186px;
         margin-left: 1005px;
@@ -476,8 +474,34 @@ $color-button-two: #fafe8a;
           font-family: "Conv_FiraGO-Bold";
           transform-style: preserve-3d;
           background-color: $color-primary;
-        }
-        .button-one {
+          cursor: pointer;
+          p {
+            margin-top: -30px;
+          }
+          &:hover::after {
+            content: "";
+            position: absolute;
+            background-color: $color-button-one;
+            height: 100%;
+            width: 100%;
+            top: 6px;
+            left: 6px;
+            z-index: -1;
+            border-radius: 50px;
+            transform: translateZ(-1px);
+          }
+          &:active::after {
+            content: "";
+            position: absolute;
+            background-color: $color-button-two;
+            height: 100%;
+            width: 200%;
+            top: 12px;
+            left: -258px;
+            z-index: -2;
+            border-radius: 50px;
+            transform: translateZ(-2px);
+          }
         }
         .button-two {
           margin-top: 20px;
@@ -485,11 +509,14 @@ $color-button-two: #fafe8a;
         .icon-one {
           width: 45px;
           height: auto;
+          margin-top: -14px;
+          margin-left: 5px;
         }
         .icon-two {
-          margin-top: 29px;
           width: 45px;
           height: auto;
+          margin-top: -14px;
+          margin-left: 5px;
         }
       }
       .section-one-image-one {
@@ -516,8 +543,8 @@ $color-button-two: #fafe8a;
         position: relative;
         width: auto;
         height: 350px;
-        top: -40%;
-        left: 55%;
+        top: -23%;
+        left: 62%;
         -ms-transform: rotate(230deg);
         -webkit-transform: rotate(230deg);
         transform: rotate(230deg);
@@ -526,25 +553,319 @@ $color-button-two: #fafe8a;
         position: relative;
         width: auto;
         height: 350px;
-        top: -60%;
-        left: 55%;
-        -ms-transform: rotate(230deg);
-        -webkit-transform: rotate(230deg);
-        transform: rotate(230deg);
+        top: -92%;
+        left: 81%;
+        -ms-transform: rotate(170deg);
+        -webkit-transform: rotate(170deg);
+        transform: rotate(170deg);
       }
       .section-one-image-five {
         position: relative;
         width: auto;
         height: 800px;
-        top: -61%;
-        left: 55%;
+        top: -126%;
+        left: 53%;
       }
     }
-
     .section-two {
+      .section-two-textboxes {
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: $color-primary;
+          border-radius: 20px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: $color-primary-hover;
+        }
+        .section-two-textbox-one {
+          z-index: 3;
+          overflow: hidden;
+          overflow-y: auto;
+          position: absolute;
+          margin-top: -140px;
+          right: 7vw;
+          width: 824px;
+          height: 719px;
+          background: $color-secondary;
+          .section-two-textbox-one-banner {
+            width: 343px;
+            height: auto;
+            margin-top: 56px;
+            margin-left: 116px;
+          }
+          h1 {
+            font-family: "Conv_FiraGO-SemiBold";
+            color: $color-white;
+            font-size: 20px;
+            letter-spacing: 1px;
+            position: absolute;
+            margin-left: 116px;
+            margin-top: 10px;
+          }
+          p {
+            font-family: "Conv_FiraGO-Book";
+            color: $color-white;
+            font-size: 18px;
+            margin-top: 90px;
+            margin-left: 116px;
+            width: 550px;
+          }
+          .section-two-textbox-one-fruit {
+            position: relative;
+            width: auto;
+            height: 350px;
+            top: -132%;
+            left: 44%;
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+          }
+        }
+        .section-two-textbox-two {
+          z-index: 4;
+          overflow: hidden;
+          overflow-y: auto;
+          position: absolute;
+          margin-top: -140px;
+          right: 7vw;
+          width: 824px;
+          height: 719px;
+          background: $color-secondary;
+          .section-two-textbox-two-banner {
+            width: 343px;
+            height: auto;
+            margin-top: 56px;
+            margin-left: 116px;
+          }
+          h1 {
+            font-family: "Conv_FiraGO-SemiBold";
+            color: $color-white;
+            font-size: 20px;
+            letter-spacing: 1px;
+            position: absolute;
+            margin-left: 116px;
+            margin-top: 10px;
+          }
+          p {
+            font-family: "Conv_FiraGO-Book";
+            color: $color-white;
+            font-size: 18px;
+            margin-top: 90px;
+            margin-left: 116px;
+            width: 550px;
+          }
+          .section-two-textbox-two-fruit {
+            position: relative;
+            width: auto;
+            height: 350px;
+            top: -133%;
+            left: 55%;
+            -ms-transform: rotate(230deg);
+            -webkit-transform: rotate(230deg);
+            transform: rotate(230deg);
+          }
+        }
+      }
+      .section-two-buttons {
+        z-index: 2;
+        position: absolute;
+        margin-top: -60px;
+        right: 1005px;
+        .section-two-buttons-button {
+          text-align: center;
+          width: 270px;
+          height: 55px;
+          outline: none;
+          border: none;
+          text-decoration: none;
+          border-radius: 50px;
+          font-size: 16px;
+          letter-spacing: 1px;
+          font-family: "Conv_FiraGO-Bold";
+          transform-style: preserve-3d;
+          background-color: $color-primary;
+          cursor: pointer;
+          p {
+            margin-top: -30px;
+          }
+          &:hover::after {
+            content: "";
+            position: absolute;
+            background-color: $color-button-one;
+            height: 100%;
+            width: 100%;
+            top: 6px;
+            left: 6px;
+            z-index: -1;
+            border-radius: 50px;
+            transform: translateZ(-1px);
+          }
+          &:active::after {
+            content: "";
+            position: absolute;
+            background-color: $color-button-two;
+            height: 100%;
+            width: 200%;
+            top: 12px;
+            left: 12px;
+            z-index: -2;
+            border-radius: 50px;
+            transform: translateZ(-2px);
+          }
+        }
+        .button-two {
+          margin-top: 20px;
+        }
+        .icon-one {
+          width: 45px;
+          height: auto;
+          margin-top: -14px;
+          margin-left: 5px;
+        }
+        .icon-two {
+          width: 45px;
+          height: auto;
+          margin-top: -14px;
+          margin-left: 5px;
+        }
+      }
+      .section-two-image-one {
+        position: relative;
+        top: -12%;
+        left: 3%;
+        z-index: 2;
+      }
+      .section-two-image-two {
+        z-index: 1;
+        position: relative;
+        width: auto;
+        height: 390px;
+        top: -42%;
+        left: 3.5%;
+        -ms-transform: rotate(290deg);
+        -webkit-transform: rotate(290deg);
+        transform: rotate(290deg);
+      }
+      .section-two-image-three {
+        z-index: 1;
+        position: relative;
+        width: auto;
+        height: 350px;
+        top: -30%;
+        left: 46%;
+        -ms-transform: rotate(210deg);
+        -webkit-transform: rotate(210deg);
+        transform: rotate(210deg);
+      }
+      .section-two-image-four {
+        z-index: 1;
+        position: relative;
+        width: auto;
+        height: 460px;
+        top: -113.5%;
+        left: 60%;
+        -ms-transform: rotate(100deg);
+        -webkit-transform: rotate(100deg);
+        transform: rotate(100deg);
+      }
     }
-
     footer {
+      height: 386px;
+      width: 100%;
+      margin-top: -88px;
+      p {
+        position: absolute;
+        color: $color-primary;
+        font-family: 'Conv_FiraGO-ExtraBold';
+        font-size: 48px;
+        margin-left: 140px;
+        margin-bottom: 210px;
+      }
+      ul {
+        li {
+          float: left;
+          height: auto;
+          width: 380px;
+        }
+      }
+    }
+  }
+  @keyframes menuSiteButtons {
+    0% {
+      top: 14vw;
+      opacity: 0;
+    }
+    100% {
+      top: 13vw;
+      opacity: 1;
+    }
+  }
+  @keyframes menuLanguageButtons {
+    0% {
+      left: 46%;
+      opacity: 0;
+    }
+    100% {
+      left: 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes menuMediaButtons {
+    0% {
+      bottom: 1vw;
+      opacity: 0;
+    }
+    100% {
+      bottom: 2vw;
+      opacity: 1;
+    }
+  }
+  @keyframes menuImageOne {
+    0% {
+      top: -22%;
+    }
+    100% {
+      top: -19%;
+    }
+  }
+  @keyframes menuImageTwo {
+    0% {
+      left: 87.7%;
+    }
+    100% {
+      left: 84.7%;
+    }
+  }
+  @keyframes menuImageThree {
+    0% {
+      top: -11%;
+    }
+    100% {
+      top: -14%;
+    }
+  }
+  @keyframes menuImageFour {
+    0% {
+      left: 76%;
+    }
+    100% {
+      left: 79%;
+    }
+  }
+  @keyframes menuImageFive {
+    0% {
+      left: -7%;
+      top: -170%;
+    }
+    100% {
+      left: -4%;
+      top: -167%;
     }
   }
 }

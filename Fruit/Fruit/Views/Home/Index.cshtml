@@ -14,13 +14,16 @@
     <title>fruitco</title>
     <link rel="stylesheet" href="~/src/css/index.css">
     <link rel="stylesheet" href="~/src/fonts/fonts.css">
+    <script>
+        var pageid = "main";
+    </script>
 </head>
 
 <body>
 
     <header class="header">
 
-        <a href="#">
+        <a href="~/src/index.html">
             <span class="header-background">
                 <img src="~/src/img/logo.svg" alt="logo" class="header-logo">
             </span>
@@ -49,20 +52,30 @@
                     <div class="button-holder">
                         <ul class="site-buttons">
                             <li>
-                                <a href="~/src/dasalevi.html" class="site-button">სასმელი</a>
+                                <a href="~/src/index.html" class="site-button"
+                                   id="main">
+                                    მთავარი
+                                    გვერდი
+                                </a>
                             </li>
                             <li>
-                                <a href="~/src/xili.html"
-                                   class="site-button">ხილ-ბოსტნეული</a>
+                                <a href="~/src/dasalevi.html" class="site-button"
+                                   id="drink">სასმელი</a>
                             </li>
                             <li>
-                                <a href="~/src/about.html" class="site-button">
+                                <a href="~/src/xili.html" class="site-button"
+                                   id="fruit">ხილ-ბოსტნეული</a>
+                            </li>
+                            <li>
+                                <a href="~/src/about.html" class="site-button"
+                                   id="about-us">
                                     ჩვენ
                                     შესახებ
                                 </a>
                             </li>
                             <li>
-                                <a href="~/src/contact.html" class="site-button">კონტაქტი</a>
+                                <a href="~/src/contact.html" class="site-button"
+                                   id="contact">კონტაქტი</a>
                             </li>
                         </ul>
 
@@ -95,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <script src="~/src/scripts/menu.js"></script>
+            <script src="scripts/menu.js"></script>
         </div>
 
     </header>
@@ -110,20 +123,20 @@
         </div>
 
         <img src="~/src/img/kiwi.svg" alt="fruit left one" class="fruit left-one">
-            <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
-            <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
-            <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
-            <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
-        
-        @* თუ მოდელებში Image ლისტში არცერთი item არ იქნება გამოიტანოს default image   *@ 
+        <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
+        <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
+        <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
+        <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
+
+        @* თუ მოდელებში Image ლისტში არცერთი item არ იქნება გამოიტანოს default image   *@
         @*@foreach (var item in Model)
-        {
-            <img src=@String.Format("~{0}", item.ImagePath.Where(c => item.SortIndex == 1))  alt="fruit left one" class="fruit left-one">
-            <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
-            <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
-            <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
-            <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
-        }*@
+            {
+                <img src=@String.Format("~{0}", item.ImagePath.Where(c => item.SortIndex == 1))  alt="fruit left one" class="fruit left-one">
+                <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
+                <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
+                <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
+                <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
+            }*@
 
     </div>
 
@@ -138,6 +151,7 @@
         <img src="~/src/img/main.png" alt="fruit right two" class="fruit right-two">
         <img src="~/src/img/vashli.png" alt="fruit right three" class="fruit right-three">
     </div>
+    <script src="~/src/scripts/menu.js"></script>
 
 </body>
 

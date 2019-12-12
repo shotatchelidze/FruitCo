@@ -1,0 +1,378 @@
+$color-white: #ffffff;
+$color-black: #111111;
+$color-primary: #39b549;
+$color-secondary: #221f1f;
+$color-third: #fff8e7;
+$color-fourth: #e8fcff;
+$color-button-one: #d9df20;
+$color-button-two: #fafe8a;
+
+* {
+  padding: 0;
+  margin: 0;
+  display: block;
+  title,
+  script {
+    display: none;
+  }
+  body {
+      overflow-x: hidden;
+      overflow-y: hidden;
+    header {
+      z-index: 10;
+      .header-logo {
+        z-index: 11;
+        width: 106px;
+        height: auto;
+        position: absolute;
+        top: 1vh;
+        left: 1vw;
+        &:hover {
+          top: 1.4vh;
+          transition: all 0.2s;
+        }
+        &:active {
+          top: 1.2vh;
+          transition: all 0.2s;
+        }
+      }
+      //menu
+      .header-menu {
+        overflow-x: hidden;
+        //button that turns on the menu screen
+        .menu-button {
+          z-index: 6;
+          position: fixed;
+          top: 46px;
+          right: 50px;
+          width: 50px;
+          height: 25px;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          &:hover {
+            top: 44px;
+            transition: all 0.2s;
+            cursor: pointer;
+          }
+          &:active {
+            top: 45px;
+            transform: scale(1.2);
+            transition: all 0.2s;
+          }
+        }
+        .menu {
+          display: none;
+          position: fixed;
+          z-index: 15;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          .menu-content {
+            background-image: linear-gradient($color-third, $color-fourth);
+            width: 100%;
+            height: 100%;
+            .site-buttons {
+              position: absolute;
+              top: 13vw;
+              left: 50%;
+              transform: translateX(-50%);
+              animation-name: menuSiteButtons;
+              animation-duration: 0.7s;
+              li {
+                .site-button {
+                  display: inline-block;
+                  position: relative;
+                  left: 50%;
+                  line-height: 56px;
+                  text-align: center;
+                  padding: 18px 176px;
+                  outline: none;
+                  border: none;
+                  text-decoration: none;
+                  transform: translateX(-50%);
+                  border-radius: 50px;
+                  letter-spacing: 2px;
+                  font-size: 36px;
+                  font-family: "Conv_FiraGO-Bold";
+                  color: $color-primary;
+                  background-color: transparent;
+                  transform-style: preserve-3d;
+                  &::selection {
+                    background: $color-button-one;
+                  }
+                  &::-moz-selection {
+                    background: $color-button-one;
+                  }
+                  &:hover {
+                    transform: translate(-50%, -3px);
+                    background-color: $color-primary;
+                    color: $color-secondary;
+                    transition: all 0.1s;
+                  }
+                  &:hover::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $color-button-one;
+                    height: 100%;
+                    width: 100%;
+                    top: 6px;
+                    left: 6px;
+                    z-index: -1;
+                    border-radius: 50px;
+                    transform: translateZ(-1px);
+                  }
+                  &:active::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $color-button-two;
+                    height: 100%;
+                    width: 100%;
+                    top: 12px;
+                    left: 12px;
+                    z-index: -2;
+                    border-radius: 50px;
+                    transform: translateZ(-2px);
+                  }
+                  &:active {
+                    transform: translate(-50%, -1px);
+                    transition: all 0.1s;
+                  }
+                }
+              }
+            }
+            .language-buttons {
+              display: table;
+              position: absolute;
+              bottom: 12vw;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              animation-name: menuLanguageButtons;
+              animation-duration: 0.7s;
+              li {
+                float: left;
+              }
+              button {
+                width: 79px;
+                height: 79px;
+              }
+              .language-button {
+                margin: 0 20px;
+                border-radius: 50%;
+                display: inline;
+                text-align: center;
+                outline: none;
+                border: none;
+                text-decoration: none;
+                font-size: 24px;
+                letter-spacing: 2px;
+                font-family: "Conv_FiraGO-SemiBold";
+                color: $color-secondary;
+                background-color: transparent;
+                transform-style: preserve-3d;
+                &::selection {
+                  background: $color-button-one;
+                }
+                &::-moz-selection {
+                  background: $color-button-one;
+                }
+                &:hover {
+                  transform: translateY(-3px);
+                  background-color: $color-primary;
+                  transition: all 0.1s;
+                }
+                &:hover::after {
+                  content: "";
+                  position: absolute;
+                  background-color: $color-button-one;
+                  height: 100%;
+                  width: 100%;
+                  top: 6px;
+                  left: 6px;
+                  z-index: -1;
+                  border-radius: 50%;
+                  transform: translateZ(-1px);
+                }
+                &:active::after {
+                  content: "";
+                  position: absolute;
+                  background-color: $color-button-two;
+                  height: 100%;
+                  width: 100%;
+                  top: 12px;
+                  left: 12px;
+                  z-index: -2;
+                  border-radius: 50%;
+                  transform: translateZ(-2px);
+                }
+                &:active {
+                  transform: translateY(-1px);
+                  transition: all 0.1s;
+                }
+              }
+            }
+            .media-buttons {
+              display: table;
+              position: absolute;
+              bottom: 2vw;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              animation-name: menuMediaButtons;
+              animation-duration: 0.7s;
+              li {
+                float: left;
+                margin: 0 10px;
+              }
+              .youtube {
+                width: 41px;
+                height: auto;
+                margin: -5px 0;
+                &::selection {
+                  background: none;
+                }
+                &::-moz-selection {
+                  background: none;
+                }
+              }
+              .facebook {
+                width: 28px;
+                height: auto;
+                &::selection {
+                  background: none;
+                }
+                &::-moz-selection {
+                  background: none;
+                }
+              }
+              .instagram {
+                width: 29px;
+                height: auto;
+                &::selection {
+                  background: none;
+                }
+                &::-moz-selection {
+                  background: none;
+                }
+              }
+            }
+            .menu-image {
+              &::selection {
+                background: none;
+              }
+              &::-moz-selection {
+                background: none;
+              }
+            }
+            .menu-image-one {
+              position: relative;
+              left: 49%;
+              top: -19%;
+              width: 440px;
+              height: auto;
+              -ms-transform: rotate(-25deg);
+              -webkit-transform: rotate(-25deg);
+              transform: rotate(-25deg);
+              animation-name: menuImageOne;
+              animation-duration: 0.7s;
+            }
+            .menu-image-two {
+              position: relative;
+              left: 84.7%;
+              top: 3%;
+              width: 600px;
+              height: auto;
+              -ms-transform: rotate(200deg);
+              -webkit-transform: rotate(200deg);
+              transform: rotate(200deg);
+              animation-name: menuImageTwo;
+              animation-duration: 0.7s;
+            }
+            .menu-image-three {
+              position: relative;
+              left: -19%;
+              top: -14%;
+              width: 700px;
+              height: auto;
+              -ms-transform: rotate(-30deg);
+              -webkit-transform: rotate(-30deg);
+              transform: rotate(-30deg);
+              animation-name: menuImageThree;
+              animation-duration: 0.7s;
+            }
+            .menu-image-four {
+              position: relative;
+              left: 79%;
+              top: -42%;
+              width: 300px;
+              height: auto;
+              -ms-transform: rotate(35deg);
+              -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+              animation-name: menuImageFour;
+              animation-duration: 0.7s;
+            }
+            .menu-image-five {
+              position: relative;
+              left: -4%;
+              top: -167%;
+              width: 650px;
+              height: auto;
+              -ms-transform: rotate(-50deg) scaleX(-1);
+              -webkit-transform: rotate(-50deg) scaleX(-1);
+              transform: rotate(-50deg) scaleX(-1);
+              animation-name: menuImageFive;
+              animation-duration: 0.7s;
+            }
+            .close {
+              color: $color-primary;
+              position: absolute;
+              right: 55px;
+              font-size: 150px;
+              font-weight: bold;
+              &:hover {
+                color: $color-secondary;
+                text-decoration: none;
+                cursor: pointer;
+                top: -5px;
+                transition: all 0.2s;
+              }
+            }
+          }
+        }
+      }
+    }
+    .section-one {
+        top: 0;
+        height: 466px;
+        width: 100%;
+        overflow: hidden;
+        h1 {
+            margin-top: 140px;
+            margin-left: 540px;
+            color: $color-primary;
+            font-size: 57px;
+            font-family: 'Conv_FiraGO-ExtraBold';
+        }
+        p {
+            margin-top: 20px;
+            margin-left: 540px;
+            color: $color-secondary;
+            font-size: 18px;
+            font-family: 'Conv_FiraGO-Book';
+            width: 730px;
+            letter-spacing: 1px;
+        }
+        .section-one-image-one {
+
+        }
+        .section-one-image-two {
+            
+        }
+    }
+    .section-two {
+
+    }
+  }
+}

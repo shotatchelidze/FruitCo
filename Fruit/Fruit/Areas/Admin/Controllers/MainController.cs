@@ -77,15 +77,24 @@ namespace Fruit.Areas.Admin.Controllers
                 var serverPath = "/Images/BackgroundImages/" + model.ImageUpload.FileName;
                 var sortIndex = model.SortIndex;
 
-                var imageViewModel = new ImageViewModel()
+                //var imageViewModel = new ImageViewModel()
+                //{
+                //    ImagePath = serverPath,
+                //    SortIndex = sortIndex
+                //};
+
+                //var image = new Image();
+                //Mapper.Map(imageViewModel, image);
+
+                var image = new Image
                 {
                     ImagePath = serverPath,
                     SortIndex = sortIndex
                 };
-                    
-                
-            }
 
+                _context.ImagePath.Add(image);
+            }
+            
             _context.SaveChanges();
 
             return RedirectToAction("Index","Main");

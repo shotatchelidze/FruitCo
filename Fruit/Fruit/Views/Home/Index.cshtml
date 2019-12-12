@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Fruit.ViewModels.MainPageViewModel>
 @{
     Layout = null;
 }
@@ -104,22 +104,32 @@
 
     <div class="split left">
         <div class="centered">
-            <h1>დასალევი</h1>
-            <p>ხილი და ბოსტნეული</p>
+            <h1>@Model.ElementAtOrDefault(0).Title</h1>
+            <p>@Model.ElementAtOrDefault(0).Subtitle</p>
             <a href="/dasalevi/index" class="button button-left">გაიგე მეტი</a>
         </div>
 
-        <img src="~/src/img/kiwi.svg" alt="fruit left one" class="fruit left-one">
-        <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
-        <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
-        <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
-        <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
+        @*<img src="~/src/img/kiwi.svg" alt="fruit left one" class="fruit left-one">
+            <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
+            <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
+            <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
+            <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">*@
+
+        @foreach (var item in Model)
+        {
+            <img src=@String.Format("~{0}", item.ImagePath.Where(c => item.SortIndex == 1))  alt="fruit left one" class="fruit left-one">
+            <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
+            <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
+            <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
+            <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
+        }
+
     </div>
 
     <div class="split right">
         <div class="centered">
-            <h1>ცოცხალი</h1>
-            <p>ხილი და ბოსტნეული</p>
+            <h1>@Model.ElementAtOrDefault(1).Title</h1>
+            <p>@Model.ElementAtOrDefault(1).Subtitle</p>
             <a href="~/src/xili.html" class="button button-right">გაიგე მეტი</a>
         </div>
 

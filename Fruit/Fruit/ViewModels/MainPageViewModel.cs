@@ -13,6 +13,14 @@ namespace Fruit.ViewModels
         public string Title { get; set; }
                 
         public string Subtitle { get; set; }
-        
+
+        public int ImageId { get; set; }
+
+        public string PageName { get; set; }
+
+        public string ImagePath { get; set; }
+
+        public int SortIndex { get; set; }
+
     }
 }

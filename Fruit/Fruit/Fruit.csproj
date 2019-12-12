@@ -235,6 +235,7 @@
     <Compile Include="ViewModels\CommonViewModel.cs" />
     <Compile Include="ViewModels\ImageViewModel.cs" />
     <Compile Include="ViewModels\IngredientViewModel.cs" />
+    <Compile Include="ViewModels\MainPageCommonViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

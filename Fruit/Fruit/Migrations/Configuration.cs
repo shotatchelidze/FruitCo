@@ -20,21 +20,21 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
 
-            //context.Information.AddOrUpdate(x => x.Id,
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" },
-            //    new Information() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი", Description = "შესავსები ველი" }
+            //context.MainPage.AddOrUpdate(x => x.Id,
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" },
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" },
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" },
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" },
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" },
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" },
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" },
+            //    new MainPage() { Title = "შესავსები ველი", Subtitle = "შესავსები ველი" }
             //    );
 
-            //context.Container.AddOrUpdate(x => x.Id,
-            //    new Container() { Name = "შესავსები" },
-            //    new Container() { Name = "შესავსები" },
-            //    new Container() { Name = "შესავსები" }
+            //context.Ingredient.AddOrUpdate(x => x.Id,
+            //    new Ingredient() { Name = "შესავსები" },
+            //    new Ingredient() { Name = "შესავსები" },
+            //    new Ingredient() { Name = "შესავსები" }
             //    );
         }
     }

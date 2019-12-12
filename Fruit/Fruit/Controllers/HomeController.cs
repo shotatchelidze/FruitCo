@@ -25,26 +25,10 @@ namespace Fruit.Controllers
 
         public ActionResult Index()
         {
-            //var informationInDb = _context.MainPage.ToList().Take(2);
-            ////var informationInDb = _context.MainPage.Include(c => c.Images).ToList().Take(2);
-            //var imageInDb = _context.ImagePath.ToList();
-
-            //var informationListViewModel = new List<MainPageViewModel>();
-            //var imageListViewModel = new List<ImageViewModel>();
-
-            //Mapper.Map(informationInDb, informationListViewModel);
-            //Mapper.Map(imageInDb, imageListViewModel);
-
-            //var mainPageCommonViewModel = new MainPageCommonViewModel()
-            //{
-            //    MainPageViewModel = informationListViewModel,
-            //    ImageViewModel = imageListViewModel
-            //};
-
-            var mainPageImageInDb = _context.MainPage.Take(2).Include(c => c.Images).ToList();
+            var mainPageAndImageInDb = _context.MainPage.Include(c => c.Images).ToList();
             var mainPageViewModel = new List<MainPageViewModel>();
 
-            Mapper.Map(mainPageImageInDb, mainPageViewModel);
+            Mapper.Map(mainPageAndImageInDb, mainPageViewModel);
 
             return View(mainPageViewModel);
         }

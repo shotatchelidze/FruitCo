@@ -109,20 +109,21 @@
             <a href="/dasalevi/index" class="button button-left">გაიგე მეტი</a>
         </div>
 
-        @*<img src="~/src/img/kiwi.svg" alt="fruit left one" class="fruit left-one">
+        <img src="~/src/img/kiwi.svg" alt="fruit left one" class="fruit left-one">
             <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
             <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
             <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
-            <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">*@
-
-        @foreach (var item in Model)
+            <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
+        
+        @* თუ მოდელებში Image ლისტში არცერთი item არ იქნება გამოიტანოს default image   *@ 
+        @*@foreach (var item in Model)
         {
             <img src=@String.Format("~{0}", item.ImagePath.Where(c => item.SortIndex == 1))  alt="fruit left one" class="fruit left-one">
             <img src="~/src/img/kargamoni.svg" alt="fruit left two" class="fruit left-two">
             <img src="~/src/img/kargamoni.svg" alt="fruit left three" class="fruit left-three">
             <img src="~/src/img/vashli.svg" alt="fruit left four" class="fruit left-four">
             <img src="~/src/img/kiwi.svg" alt="fruit left five" class="fruit left-five">
-        }
+        }*@
 
     </div>
 
